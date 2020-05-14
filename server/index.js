@@ -4,8 +4,6 @@ const { Nuxt, Builder } = require('nuxt')
 const bodyParser = require('body-parser')
 const app = express()
 const apiRoutes = require('./apiRoutes')
-const mongoose = require('mongoose')
-const cors = require('cors')
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
@@ -27,25 +25,9 @@ async function start () {
 
   app.use(bodyParser.json({ limit: '50mb', extended: true }))
   app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
-  app.use(cors({
-                 allowedHeaders: ['Content-Type'],
-                 origin: '*',
-                 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-                 methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-                 preflightContinue: false
-               }))
   app.use('/api', apiRoutes)
   app.use(nuxt.render)
 
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/test', { useNewUrlParser: true })
-
-  const db = mongoose.connection
-
-  if (!db) {
-    consola.info('Error connecting db')
-  } else {
-    console.info('Db connected successfully')
-  }
 
   // Listen the server
   app.listen(port, host)

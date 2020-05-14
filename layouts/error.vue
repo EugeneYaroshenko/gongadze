@@ -1,8 +1,5 @@
 <template>
   <div class="container">
-    <nav>
-      <social-icons color="dark" />
-    </nav>
     <div class="error-main">
       <h2 v-if="error.statusCode === 404">{{ error.message }}</h2>
       <h2 v-else>Сталася якась халепа!</h2>
@@ -12,7 +9,6 @@
 </template>
 
 <script>
-  import SocialIcons from '~/modules/app/components/socialIcons'
   export default {
     props: {
       error: {
@@ -20,9 +16,6 @@
         required: true,
         default: () => {}
       }
-    },
-    components: {
-      SocialIcons
     }
   }
 </script>

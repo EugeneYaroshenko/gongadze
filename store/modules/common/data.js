@@ -1,8 +1,7 @@
 import * as types from '@/store/mutationTypes'
 
 const state = () => ({
-  cinemas: null,
-  locations: null,
+  posts: null,
   request: {
     loading: false,
     fetched: false,
@@ -18,49 +17,29 @@ const getters = {
 }
 
 const mutations = {
-  [types.GET_DATA_REQUEST] (state) {
-    state.cinemas = null
-    state.locations = null
+  [types.GET_POSTS_REQUEST] (state) {
+    state.posts = null
     state.request = { ...state.request, fetched: false, loading: true }
   },
-  [types.GET_DATA_SUCCESS] (state, data) {
-    state.cinemas = data.cinemas
-    state.locations = data.locations
+  [types.GET_POSTS_SUCCESS] (state, data) {
+    state.posts = data
     state.request = { ...state.request, fetched: true, loading: false }
   },
-  [types.GET_DATA_ERROR] (state, payload) {
+  [types.GET_POSTS_ERROR] (state, payload) {
     state.request = { ...state.request, fetched: false, loading: false, error: payload.error }
   }
 }
 
 const actions = {
-  async updateData ({ commit }) {
-    commit(types.GET_DATA_REQUEST)
-      try {
-        const data = await this.$axios.$get('/api/data')
+  async getPosts ({ commit }) {
+    commit(types.GET_POSTS_REQUEST)
 
-        commit(types.GET_DATA_SUCCESS, data)
-        localStorage.setItem('commonData', JSON.stringify(data))
-      } catch (error) {
-        commit(types.GET_DATA_ERROR, error)
-      }
-  },
-  async getData ({ commit }) {
-    commit(types.GET_DATA_REQUEST)
+    try {
+      const data = await this.$axios.$get('/api/posts')
 
-    const dataFromLocalStorage = process.browser ? localStorage.getItem('commonData') : null
-
-    if (dataFromLocalStorage) {
-      commit(types.GET_DATA_SUCCESS, JSON.parse(dataFromLocalStorage))
-    } else {
-      try {
-        const data = await this.$axios.$get('/api/data')
-
-        commit(types.GET_DATA_SUCCESS, data)
-        localStorage.setItem('commonData', JSON.stringify(data))
-      } catch (error) {
-        commit(types.GET_DATA_ERROR, error)
-      }
+      commit(types.GET_POSTS_SUCCESS, data)
+    } catch (error) {
+      commit(types.GET_POSTS_ERROR, error)
     }
   }
 }
