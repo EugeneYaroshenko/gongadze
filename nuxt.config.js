@@ -36,7 +36,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/styles/index.scss'
+    '@/styles/index.scss',
+    '@/styles/gongadze.css'
   ],
   /*
   ** Plugins to load before mounting the App
