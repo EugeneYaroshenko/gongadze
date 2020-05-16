@@ -30,7 +30,7 @@
           <div class="menu_extended__floating award-projects">
             <ul role="list" class="menu-subitems">
               <li class="menu-subitem">
-                <nuxt-link to="/projects" class="subitem-link w-inline-block" @click.native="hideMenu">
+                <nuxt-link to="/projects/publications" class="subitem-link w-inline-block" @click.native="hideMenu">
                   <div class="text-regular-20">Публікації</div>
                 </nuxt-link>
               </li>
@@ -124,7 +124,7 @@
             @mouseenter="showExtendedMenu('award-projects')"
             @mouseleave="hideExtendedMenu('award-projects')"
           >
-            <nuxt-link to="/projects" class="menu-item__text w-inline-block" @click.native="hideMenu">
+            <nuxt-link to="/projects/publications" class="menu-item__text w-inline-block" @click.native="hideMenu">
               <div class="text-bold-28">Проєкти Премії</div>
             </nuxt-link>
           </div>

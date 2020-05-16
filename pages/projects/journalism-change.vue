@@ -9,23 +9,10 @@
         <div class="projects-decription">
           <div class="text-regular-20">Проєкт, створений спільно з Радіо “Свобода”, у межах якого журналісти розповідають, як їхні тексти, сюжети чи ефіри змінили життя окремих людей чи цілих спільнот</div>
         </div>
-        <div class="w-layout-grid publications-grid">
-          <a href="#" class="publication-container w-inline-block">
-            <div class="publication-image journalism-change"></div>
-            <div class="publication-info__container">
-              <div class="publication-info">
-                <div class="publication-description">
-                  <div class="publication-date">15 квітня 2020</div>
-                  <div class="publication-name">
-                    <div class="text-bold-18"><strong>Три історії про те, як сказане в ефірі чи написане в матеріалах змінювало реальність</strong></div>
-                  </div>
-                </div>
-                <div class="publication-read">
-                  <div class="text-bold-18">Читати</div>
-                </div>
-              </div>
-            </div>
-          </a>
+        <div class="w-layout-grid publications-grid" v-if="posts && posts.length">
+          <div v-for="(post, index) in filteredProjects" :key="index">
+            <project :post="post" :redirect-to="redirectTo"/>
+          </div>
         </div>
       </div>
     </div>
@@ -33,8 +20,28 @@
 </template>
 
 <script>
+  import project from '~/modules/projects/project';
   export default {
-    layout: 'default'
+    components: {
+      project
+    },
+    props: {
+      posts: {
+        type: Array,
+        default: null,
+        required: true
+      },
+    },
+    methods: {
+      redirectTo(postID) {
+        return this.$router.push(`/project/${postID}`)
+      }
+    },
+    computed: {
+      filteredProjects () {
+        return this.posts.filter(post => post.acf.pidrubrika === 'journalism-change')
+      }
+    }
   }
 </script>
 

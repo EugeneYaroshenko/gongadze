@@ -22,69 +22,8 @@
               </a>
             </div>
           </div>
-          <div class="news-other">
-            <div class="news-photo"></div>
-            <div class="news-text-container">
-              <div class="news-text">
-                <div class="news-date">
-                  <div class="text-light-12">2 КВІТНЯ 2020</div>
-                </div>
-                <div class="news-name">
-                  <div class="text-bold-15">Вінтонів, Казарін, Логвиненко в короткому списку Премії імені Георгія Ґонґадзе 2020 року</div>
-                </div>
-                <div class="publication-read">
-                  <div class="text-bold-15">Читати</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="news-other">
-            <div class="news-photo"></div>
-            <div class="news-text-container">
-              <div class="news-text">
-                <div class="news-date">
-                  <div class="text-light-12">2 КВІТНЯ 2020</div>
-                </div>
-                <div class="news-name">
-                  <div class="text-bold-15">Премія Ґонґадзе організовує медіадень у Києво-Могилянській Бізнес-Школі: “Читати, розуміти, берегти нерви: Як орієнтуватись у світі сучасних медіа”</div>
-                </div>
-                <div class="publication-read">
-                  <div class="text-bold-15">Читати</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="news-other">
-            <div class="news-photo"></div>
-            <div class="news-text-container">
-              <div class="news-text">
-                <div class="news-date">
-                  <div class="text-light-12">2 КВІТНЯ 2020</div>
-                </div>
-                <div class="news-name">
-                  <div class="text-bold-15">Вінтонів, Казарін, Логвиненко в короткому списку Премії імені Георгія Ґонґадзе 2020 року</div>
-                </div>
-                <div class="publication-read">
-                  <div class="text-bold-15">Читати</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="news-other">
-            <div class="news-photo"></div>
-            <div class="news-text-container">
-              <div class="news-text">
-                <div class="news-date">
-                  <div class="text-light-12">2 КВІТНЯ 2020</div>
-                </div>
-                <div class="news-name">
-                  <div class="text-bold-15">Премія Ґонґадзе організовує медіадень у Києво-Могилянській Бізнес-Школі: “Читати, розуміти, берегти нерви: Як орієнтуватись у світі сучасних медіа”</div>
-                </div>
-                <div class="publication-read">
-                  <div class="text-bold-15">Читати</div>
-                </div>
-              </div>
-            </div>
+          <div v-for="(post, index) in allNews" :key="index">
+            <news :post="post" :redirect-to="redirectTo"/>
           </div>
         </div>
       </div>
@@ -93,8 +32,19 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+  import news from '~/modules/newsFeed/news'
+
   export default {
-    layout: 'default'
+    layout: 'default',
+    computed: {
+      ...mapState({
+                    allNews: state => state.data.posts.by_categories['Новини'],
+                  })
+    },
+    components: {
+      news
+    }
   }
 </script>
 

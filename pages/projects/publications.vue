@@ -4,10 +4,10 @@
       <div class="gongadze-content__headline">
         <h3 class="headline-h3">проєкти премії</h3>
       </div>
-      <h4 class="headline-h4 headline-with-subtext">Лишаюсь у професії</h4>
+      <h4 class="headline-h4 headline-with-subtext">Публікації</h4>
       <div class="gongadze-content--condensed">
         <div class="projects-decription">
-          <div class="text-regular-20">Проєкт, створений спільно з “Детектор медіа”, у межах якого журналісти й редактори розповідають, що їх надихає в роботі, як долають кризи і труднощі та що приносить найбільше професійне задоволення</div>
+          <div class="text-regular-20">Історії про тих, хто творить незалежну журналістику</div>
         </div>
         <div class="w-layout-grid publications-grid" v-if="posts && posts.length">
           <div v-for="(post, index) in filteredProjects" :key="index">
@@ -40,7 +40,7 @@
     },
     computed: {
       filteredProjects () {
-        return this.posts.filter(post => post.acf.pidrubrika === 'profession-stay')
+        return this.posts.filter(post => post.acf.pidrubrika === 'publications')
       }
     }
   }
