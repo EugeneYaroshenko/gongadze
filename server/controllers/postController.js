@@ -12,3 +12,16 @@ exports.posts = async function (req, res) {
     return res.status(400).send({ error: err })
   }
 }
+
+
+exports.categories = async function (req, res) {
+  try {
+    const request = await axios.get('https://admin.gongadzeprize.org/wp-json/wp/v2/categories')
+
+    consola.success(`categories were retrieved successfully`)
+    return res.status(200).send({ data: request.data })
+  } catch (err) {
+    consola.error(`$error retrieving categories: ${err}`)
+    return res.status(400).send({ error: err })
+  }
+}

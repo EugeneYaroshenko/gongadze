@@ -30,16 +30,6 @@
           <div class="menu_extended__floating award-projects">
             <ul role="list" class="menu-subitems">
               <li class="menu-subitem">
-                <nuxt-link to="/projects/publications" class="subitem-link w-inline-block" @click.native="hideMenu">
-                  <div class="text-regular-20">Публікації</div>
-                </nuxt-link>
-              </li>
-              <li class="menu-subitem">
-                <nuxt-link to="/projects/journalism-sovereign-ukraine" class="subitem-link w-inline-block" @click.native="hideMenu">
-                  <div class="text-regular-20">Журналістика незалежної України:<br>Історія від першої особи</div>
-                </nuxt-link>
-              </li>
-              <li class="menu-subitem">
                 <nuxt-link to="/projects/journalism-change" class="subitem-link w-inline-block" @click.native="hideMenu">
                   <div class="text-regular-20">Журналістика змін</div>
                 </nuxt-link>
@@ -50,7 +40,7 @@
                 </nuxt-link>
               </li>
               <li class="menu-subitem">
-                <nuxt-link to="/projects/social-enterprize" class="subitem-link w-inline-block" @click.native="hideMenu">
+                <nuxt-link to="/projects/stories-social-entrepreneurship" class="subitem-link w-inline-block" @click.native="hideMenu">
                   <div class="text-regular-20">Історії соціального підприємництва</div>
                 </nuxt-link>
               </li>
@@ -94,8 +84,8 @@
           </div>
         </div>
       </div>
-      <div class="menu-items">
-        <div class="language-selector">
+      <div class="menu-items" >
+        <div class="language-selector" style="display:none">
           <div class="lang-code selected">
             <div class="text-semibold-16">UA</div>
           </div>
@@ -104,7 +94,7 @@
           </div>
         </div>
         <div class="menu-items__container menu-items--desktop">
-          <div class="menu-item">
+          <div class="menu-item" @mouseenter="hideExtendedMenu">
             <nuxt-link
               to="/"
               aria-current="page"
@@ -114,24 +104,27 @@
               <div class="text-bold-28">Головна</div>
             </nuxt-link>
           </div>
-          <div class="menu-item">
-            <nuxt-link to="/news" class="menu-item__text w-inline-block" @click.native="hideMenu">
+          <div class="menu-item" @mouseenter="hideExtendedMenu">
+            <nuxt-link to="/news-feed" class="menu-item__text w-inline-block" @click.native="hideMenu">
               <div class="text-bold-28">Новини</div>
+            </nuxt-link>
+          </div>
+          <div class="menu-item" @mouseenter="hideExtendedMenu">
+            <nuxt-link to="/publications" class="menu-item__text w-inline-block" @click.native="hideMenu">
+              <div class="text-bold-28">Публікації</div>
             </nuxt-link>
           </div>
           <div
             class="menu-item"
             @mouseenter="showExtendedMenu('award-projects')"
-            @mouseleave="hideExtendedMenu('award-projects')"
           >
-            <nuxt-link to="/projects/publications" class="menu-item__text w-inline-block" @click.native="hideMenu">
+            <div class="menu-item__text w-inline-block" @click.native="hideMenu">
               <div class="text-bold-28">Проєкти Премії</div>
-            </nuxt-link>
+            </div>
           </div>
           <div
             class="menu-item"
             @mouseenter="showExtendedMenu('about-award')"
-            @mouseleave="hideExtendedMenu('about-award')"
           >
             <nuxt-link to="/about" class="menu-item__text w-inline-block" @click.native="hideMenu">
               <div class="text-bold-28">Про Премію</div>
@@ -140,7 +133,6 @@
           <div
             class="menu-item"
             @mouseenter="showExtendedMenu('georgiy-gongadze')"
-            @mouseleave="hideExtendedMenu('georgiy-gongadze')"
           >
             <nuxt-link to="/georgiy-gongadze" class="menu-item__text w-inline-block" @click.native="hideMenu">
               <div class="text-bold-28">Георгій Ґонґадзе</div>
@@ -156,6 +148,11 @@
             </div>
             <div class="menu-item">
               <nuxt-link id="menu-items__text" to="/news-feed" class="menu-item__text w-inline-block" @click.native="hideMenu">
+                <div class="text-bold-28">Новини</div>
+              </nuxt-link>
+            </div>
+            <div class="menu-item">
+              <nuxt-link to="/publications" class="menu-item__text w-inline-block" @click.native="hideMenu">
                 <div class="text-bold-28">Новини</div>
               </nuxt-link>
             </div>
@@ -212,23 +209,13 @@
               <div class="subname-items">
                 <ul role="list" class="subname-items__list award-projects">
                   <li class="subname-item">
-                    <nuxt-link to="projects" class="subname-item__link w-inline-block" @click.native="hideMenu">
-                      <div>ПУБЛІКАЦІЇ</div>
-                    </nuxt-link>
-                  </li>
-                  <li class="subname-item">
-                    <nuxt-link to="projects/journalism-sovereign-ukraine" class="subname-item__link w-inline-block" @click.native="hideMenu">
-                      <div>ЖУРНАЛІСТИКА НЕЗАЛЕЖНОЇ УКРАЇНИ:<br>ІСТОРІЯ ВІД ПЕРШОЇ ОСОБИ</div>
-                    </nuxt-link>
-                  </li>
-                  <li class="subname-item">
                     <nuxt-link to="projects/journalism-change" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>ЖУРНАЛІСТИКА ЗМІН</div>
                     </nuxt-link>
                     <nuxt-link to="projects/profession-stay" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>ЛИШАЮСЬ У ПРОФЕСІЇ</div>
                     </nuxt-link>
-                    <nuxt-link to="projects/social-enterprize" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <nuxt-link to="projects/stories-social-entrepreneurship" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>Історії соціального прідприємництва</div>
                     </nuxt-link>
                   </li>
@@ -348,7 +335,10 @@
         }
       },
       hideExtendedMenu() {
-        // this.$refs[`${element}--web`].style.opacity = 0
+        if (this.activeElement) {
+          this.$refs[this.activeElement].style.opacity = 0
+          this.$refs[this.activeElement].style.visibility = 'hidden'
+        }
       }
     },
 

@@ -1,16 +1,28 @@
 import * as types from '@/store/mutationTypes'
-import { pidrubriki } from '@/config/UI'
+import { transformStringIntoSlug } from '~/utilities/postUtilities';
+import moment from 'moment';
+import 'moment/locale/uk';
 
-const initialPosts = {
-  by_categories: null,
-  by_first_page_priority: {
-    first_post: null,
-    other_posts: []
+moment.locale('uk');
+
+console.log(moment().format('dddd'))
+
+const simplifiedPost = function (post) {
+  return {
+    id: post.ID,
+    content: post.post_content,
+    title: post.post_title,
+    slug: transformStringIntoSlug(post.post_title),
+    date: moment(post.acf.date_published, 'YYYYMMDD').format('D MMMM, YYYY'),
+    date_mls: moment(post.acf.date_published, 'YYYYMMDD').valueOf(),
+    categories: post.category,
+    post_image: post.featured_image,
   }
 }
 
 const state = () => ({
-  posts: null,
+  postsByCategory: null,
+  allPosts: null,
   request: {
     loading: false,
     fetched: false,
@@ -27,29 +39,25 @@ const mutations = {
     state.request = { ...state.request, fetched: false, loading: true }
   },
   [types.GET_POSTS_SUCCESS] (state, response) {
-    const postsByCategories = {}
-    const postsByFirstPagePriority = { first_post: null, other_posts: [] }
+    let postsByCategory = {}
+    let allPosts = []
 
     response.data.forEach(postItem => {
-      if (postsByCategories[postItem.category[0].name]) {
-        postsByCategories[postItem.category[0].name] = [ ...postsByCategories[postItem.category[0].name], ...[ postItem ] ]
-      } else {
-        postsByCategories[postItem.category[0].name] = [postItem]
-      }
+      const post = simplifiedPost(postItem)
 
-      if (postItem.acf.on_title_page) {
-        if (postItem.acf.prime_material) {
-          postsByFirstPagePriority.first_post = postItem
+      post.categories.forEach(category => {
+        if (postsByCategory[category.cat_ID]) {
+          postsByCategory[category.cat_ID] = [ ...postsByCategory[category.cat_ID], ...[ post ] ]
         } else {
-          postsByFirstPagePriority.other_posts = [ ...postsByFirstPagePriority.other_posts, ... [postItem] ]
+          postsByCategory[category.cat_ID] = [post]
         }
-      }
+      })
+
+      allPosts = [...allPosts, ...[ post]]
     })
 
-    state.posts = {
-      by_categories: postsByCategories,
-      by_first_page_priority: postsByFirstPagePriority
-    }
+    state.postsByCategory = postsByCategory
+    state.allPosts = allPosts
 
     state.request = { ...state.request, fetched: true, loading: false }
   },

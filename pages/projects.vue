@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-child :posts="projectsPosts" />
+    <nuxt-child :posts="postsByCategory" :categories="allCategories" />
   </div>
 </template>
 
@@ -11,7 +11,8 @@
     layout: 'default',
     computed: {
       ...mapState({
-                    projectsPosts: state => state.data.posts.by_categories['Проєкти Премії'],
+                    postsByCategory: state => state.data.postsByCategory,
+                    allCategories: state => state.categories.categories,
                   })
     }
   }

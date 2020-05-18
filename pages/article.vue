@@ -77,17 +77,4 @@
   h3 {
     margin: 64px 0;
   }
-
-  /*a {*/
-    /*color: #7CCDCA;*/
-    /*font-weight: 600;*/
-    /*letter-spacing: .03em;*/
-    /*text-decoration: none;*/
-
-    /*&:hover {*/
-      /*color: #67CDC9;*/
-      /*text-decoration: underline;*/
-    /*}*/
-  /*}*/
-
 </style>

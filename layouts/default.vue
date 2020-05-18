@@ -1,7 +1,7 @@
 <template>
   <div>
     <menu-component />
-    <div v-if="postsFetched">
+    <div v-if="postsFetched && categoriesFetched">
       <nuxt />
     </div>
     <div class="loading-container" v-else>
@@ -24,12 +24,14 @@
     created () {
       if (!this.allPosts) {
         this.$store.dispatch('data/getPosts')
+        this.$store.dispatch('categories/getCategories')
       }
     },
     computed: {
       ...mapState({
                     allPosts: state => state.data.posts,
                     postsFetched: state => state.data.request.fetched,
+                    categoriesFetched: state => state.categories.request.fetched,
                   })
     }
   }

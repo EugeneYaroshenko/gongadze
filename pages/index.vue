@@ -5,26 +5,26 @@
         <div class="column-art"></div>
         <div class="column">
           <h1 class="title-screen__heading">Премія <br>Імені<br>Георгія <br>Ґонґадзе</h1>
-          <title-material
-            :post="allPosts.by_first_page_priority.first_post"
-          />
+          <!--<title-material-->
+            <!--:post="allPosts.by_first_page_priority.first_post"-->
+          <!--/>-->
           <div class="scroll-down__container">
             <div class="scroll-down--additional"></div>
             <div class="scroll-down__icon"></div>
           </div>
         </div>
       </div>
-      <div class="title-screen__materials">
-        <div
-          v-for="(post, index) in allPosts.by_first_page_priority.other_posts"
-          :key="index"
-        >
-          <other-material
-            :post="post"
-            :postIndex="index"
-          />
-        </div>
-      </div>
+      <!--<div class="title-screen__materials">-->
+        <!--<div-->
+          <!--v-for="(post, index) in allPosts.by_first_page_priority.other_posts"-->
+          <!--:key="index"-->
+        <!--&gt;-->
+          <!--<other-material-->
+            <!--:post="post"-->
+            <!--:postIndex="index"-->
+          <!--/>-->
+        <!--</div>-->
+      <!--</div>-->
       <h1 class="headline-h4">Партнери</h1>
       <div class="partners-block">
         <div class="w-layout-grid grid-3">
