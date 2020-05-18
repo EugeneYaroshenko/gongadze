@@ -19,7 +19,7 @@
 <script>
   import { mapState } from 'vuex'
   import News from '~/modules/newsFeed/news'
-  import MainNews from '~/modules/newsFeed/MainNews'
+  import MainNews from '~/modules/newsFeed/mainNews'
 
   export default {
     layout: 'default',
