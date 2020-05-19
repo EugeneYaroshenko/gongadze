@@ -41,7 +41,6 @@
     }
   }
 </script>
-
 <style lang="scss">
   .loading-container {
     height: 100vh;
