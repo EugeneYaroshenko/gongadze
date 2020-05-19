@@ -285,63 +285,6 @@ body {
   background-color: #67cdc9;
 }
 
-.footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 64px;
-  padding: 18px 24px 64px;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.footer-logo {
-  width: 122px;
-  height: 157px;
-  background-image: url('../assets/images/footer-icon.svg');
-  background-position: 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.footer-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0px;
-  padding-left: 0px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  list-style-type: none;
-}
-
-.footer-list__item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 .text-regular-14 {
   font-size: 14px;
   letter-spacing: 0.02em;
@@ -350,47 +293,6 @@ body {
 
 .text-regular-14:hover {
   text-decoration: none;
-}
-
-.footer-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 24px;
-  padding-right: 0px;
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png');
-  background-position: 50% 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.footer-icon.facebook {
-  background-image: url('../assets/images/Group.svg');
-  background-position: 50% 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.footer-icon.instagram {
-  background-image: url('../assets/images/Group-11.svg');
-}
-
-.footer-icon.twitter {
-  margin-right: 0px;
-  background-image: url('../assets/images/Group-1.svg');
-}
-
-.footer-icons {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
 }
 
 .team-member {
@@ -547,6 +449,7 @@ body {
 .text-bold-24 {
   font-size: 1.5em;
   font-weight: 700;
+  line-height: 1.6;
 }
 
 .founder-description {
@@ -1635,32 +1538,35 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-flow: column;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .main-news-image {
-  width: 45%;
-  height: 300px;
+  width: 100%;
+  height: 500px;
   background-image: url('../assets/images/image-journalism.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .main-news-text-container {
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  height: 300px;
 }
 
 .main-news-text {
   position: absolute;
-  top: 32px;
-  right: 24px;
-  width: 100%;
-  height: 100%;
-  padding: 50px 24px 32px 20px;
+  top: 12px;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: block;
+  padding: 50px 24px 64px 20px;
   border-radius: 8px;
   background-color: #fcfcfa;
   background-image: -webkit-gradient(linear, left top, right top, from(hsla(0, 0%, 98.8%, 0.1)), to(#fff));
@@ -1851,32 +1757,151 @@ body {
   margin-bottom: 40px;
 }
 
+
+.partners-block {
+  margin-bottom: 92px;
+}
+
+.partners-grid {
+  justify-items: center;
+  grid-column-gap: 40px;
+  grid-row-gap: 54px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.partners-grid.organizational-partners-grid {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.partner-icon__container {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.partner-subheading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.partner-icon {
+  height: 100px;
+  max-width: 300px;
+  background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.partner-icon.ua-kultura {
+  background-image: url('../assets/images/UA_Kultura_logo.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.partner-icon.radio-svoboda {
+  background-image: url('../assets/images/radio-svoboda_compact-brandmark.svg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.partner-icon.internews-ukraine {
+  background-image: url('../assets/images/internews-ukraine-01.svg');
+}
+
+.partner-icon.mind-logo {
+  background-image: url('../assets/images/mind_logo-01.svg');
+}
+
+.partner-icon.detector-media {
+  background-image: url('../assets/images/detector-media_vv.svg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.partner-icon.imi-logo {
+  background-image: url('../assets/images/ІМІ.png');
+}
+
+.partner-icon.na-chasi {
+  background-image: url('../assets/images/Na-chasi-0.svg');
+}
+
+.partner-icon.hromadske-logo {
+  background-image: url('../assets/images/Logo-O-2.png');
+}
+
+.partner-icon.pen-ukraine {
+  background-image: url('../assets/images/pen-ukraine.svg');
+  background-size: contain;
+}
+
+.partner-icon.ukrainska-pravda {
+  background-image: url('../assets/images/pravda.png');
+}
+
+.partner-icon.kmbs-alumni {
+  background-image: url('../assets/images/kmbs-icon.svg');
+}
+
+.partner-icon.twiga {
+  background-image: url('../assets/images/logo.png');
+  background-position: 50% 100%;
+}
+
+.partner-icon.kmbs-logo {
+  background-image: url('../assets/images/kmbs-grey.svg');
+  background-position: 50% 100%;
+  background-size: contain;
+}
+
+.partner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.headline-h4.first-page-headline {
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+
 @media screen and (max-width: 991px) {
+  .partners-block {
+    margin-bottom: 55px;
+  }
+  .partner-icon.internews-ukraine {
+    background-size: contain;
+  }
+  .partner-icon.detector-media {
+    background-size: contain;
+  }
+
   .maecenas-grid {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-  }
-  .footer-list {
-    padding-left: 32px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-  }
-  .footer-icons {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
   }
   .founder-description {
     max-width: 80%;
@@ -2127,6 +2152,7 @@ body {
   }
   .main-news-image {
     width: 100%;
+    height: 400px;
   }
   .main-news-text-container {
     height: 250px;
@@ -2138,7 +2164,7 @@ body {
   .main-news-text {
     position: absolute;
     top: -19px;
-    right: auto;
+    width: 100%;
   }
   .news-grid {
     grid-row-gap: 32px;
@@ -2199,6 +2225,18 @@ body {
     font-size: 14px;
   }
 
+  .partners-grid {
+    grid-column-gap: 24px;
+    grid-row-gap: 28px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .partners-grid.organizational-partners-grid {
+    max-width: 400px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .article-name {
     margin-bottom: 12px;
   }
@@ -2231,15 +2269,6 @@ body {
   .maecenas-button {
     left: 0px;
     bottom: 8px;
-  }
-  .footer-logo {
-    width: 73.47px;
-    height: 95px;
-  }
-  .footer-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 12px;
   }
   .team-member {
     margin-bottom: 16px;
@@ -2465,31 +2494,7 @@ body {
   .maecenas-button {
     bottom: 0px;
   }
-  .footer {
-    padding-right: 16px;
-    padding-left: 16px;
-  }
-  .footer-list {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 12px;
-  }
-  .footer-list__item {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
   .text-regular-14 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
-  }
-  .footer-icon {
-    margin-right: 16px;
-  }
-  .footer-icons {
-    padding-top: 14px;
-    padding-bottom: 20px;
     -webkit-box-flex: 0;
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
@@ -2608,7 +2613,17 @@ body {
   .publication-info {
     padding-right: 0px;
   }
+
+  .main-news {
+    width: 100%;
+  }
+
+  .main-news-image {
+    height: 60vw;
+  }
+
   .main-news-text {
+    top: 20px;
     padding-top: 8px;
   }
   .news-grid {
@@ -2971,11 +2986,11 @@ body {
   cursor: pointer;
   box-shadow: 0px 1.9021px 4.75524px rgba(0, 0, 0, 0.0104523), 0px 5.25905px 13.1476px rgba(0, 0, 0, 0.015), 0px 12.6618px 31.6544px rgba(0, 0, 0, 0.0195477), 0px 42px 105px rgba(0, 0, 0, 0.03);
   transition: all 350ms ease;
+}
 
-&:hover {
+.title-screen__material:hover {
    box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0112458), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0161557), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.02), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0238443), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0287542), 0px 100px 80px rgba(0, 0, 0, 0.04);
  }
-}
 
 .material__topic {
   padding-right: 94px;
@@ -3165,9 +3180,6 @@ body {
   font-weight: 700;
 }
 
-.partners-block {
-  margin-bottom: 100px;
-}
 
 .grid-3 {
   grid-column-gap: 40px;
@@ -3176,11 +3188,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.partner-icon {
-  width: 100%;
-  height: 100px;
-  background-color: #b0b0af;
-}
 
 @media screen and (max-width: 991px) {
   .title-screen__cover {
@@ -3207,15 +3214,6 @@ body {
   .headline-h4 {
     margin-top: 40px;
     margin-bottom: 24px;
-  }
-  .footer-logo {
-    width: 73.47px;
-    height: 95px;
-  }
-  .footer-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 12px;
   }
   .title-screen__cover {
     margin-left: 0px;

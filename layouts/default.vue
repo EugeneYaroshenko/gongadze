@@ -17,6 +17,7 @@
   import { mapState } from 'vuex'
 
   export default {
+    scrollToTop: true,
     components: {
       MenuComponent,
       FooterComponent

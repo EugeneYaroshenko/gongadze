@@ -25,6 +25,7 @@
   import project from '~/modules/projects/project';
 
   export default {
+    scrollToTop: true,
     components: {
       project
     },
