@@ -1,13 +1,17 @@
 <template>
   <div>
-    <menu-component />
     <div v-if="postsFetched && categoriesFetched">
+      <menu-component />
       <nuxt />
+      <footer-component />
     </div>
     <div class="loading-container" v-else>
-      <div class="loading-container__icon"/>
+      <div class="loading-block">
+        <div class="loading-container__icon">
+          <img src="../assets/images/loader.gif" alt="">
+        </div>
+      </div>
     </div>
-    <footer-component />
   </div>
 </template>
 
@@ -41,10 +45,19 @@
 <style lang="scss">
   .loading-container {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+  }
+
+  .loading-block {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(3, 3, 3);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
   }
 
   .loading-container__icon {
@@ -54,19 +67,6 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    animation: 3s loading ease infinite;
-  }
-
-  @keyframes loading {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 50%;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
 </style>

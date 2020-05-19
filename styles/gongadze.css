@@ -360,6 +360,12 @@ body {
   line-height: 1.66em;
 }
 
+
+.text-regular-20 {
+  font-size: 1.25em;
+  line-height: 1.66em;
+}
+
 .text-regular-20.zasnovniki-text {
   max-width: 600px;
   margin-right: auto;
@@ -369,8 +375,9 @@ body {
 }
 
 .founders-block {
-  width: 70%;
-  margin-top: 16px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -378,8 +385,8 @@ body {
 .grid {
   margin-right: auto;
   margin-left: auto;
-  grid-row-gap: 24px;
-  -ms-grid-rows: auto 24px auto;
+  grid-row-gap: 40px;
+  -ms-grid-rows: auto 40px auto;
   grid-template-areas: "Main-Founder" "Main-Founder";
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
@@ -404,6 +411,10 @@ body {
 }
 
 .founder-about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
 }
 
@@ -412,15 +423,22 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 32px;
+  margin-right: 16px;
+  margin-bottom: 0px;
+  padding-right: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .founder-icon {
@@ -449,12 +467,11 @@ body {
 .text-bold-24 {
   font-size: 1.5em;
   font-weight: 700;
-  line-height: 1.6;
 }
 
 .founder-description {
-  max-width: 70%;
-  margin-top: 0px;
+  max-width: 100%;
+  margin-top: 64px;
   margin-right: auto;
   margin-left: auto;
   color: #4a4a49;
@@ -463,7 +480,13 @@ body {
 }
 
 .another-founder {
-  padding: 24px 20px 16px 24px;
+  display: block;
+  padding: 36px 20px 31px 24px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-transition: box-shadow 200ms ease;
   transition: box-shadow 200ms ease;
 }
@@ -780,7 +803,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 45%;
   height: 500px;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
@@ -809,12 +832,16 @@ body {
 }
 
 .laureate-visual-back {
+  position: relative;
+  overflow: hidden;
   width: 70%;
   height: 100%;
-  background-color: #caf4f2;
+  background-color: #928fd9;
 }
 
 .laureate-visual-back.laureate-visual-right {
+  position: relative;
+  overflow: hidden;
   background-color: #d3d2f6;
 }
 
@@ -824,14 +851,10 @@ body {
   top: 0%;
   right: auto;
   bottom: auto;
-  width: 450px;
-  height: 500px;
+  width: 500px;
+  height: 550px;
   margin-top: 40px;
   margin-left: 24px;
-  background-image: url('../assets/images/water-background.png');
-  background-position: 0px 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .visual-water.visual-right {
@@ -852,13 +875,14 @@ body {
 }
 
 .laureate-photo.laureate-shadow {
+  right: 10%;
   width: 300px;
-  height: 80%;
+  height: 90%;
   background-image: url('../assets/images/rsz_кіпіані1.jpg');
   background-position: 40% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 0 2px 7.66552px 0 rgba(44, 42, 42, 0.02), 0 4px 15.1079px 0 rgba(44, 42, 42, 0.03), 0 9px 24.5756px 0 rgba(44, 42, 42, 0.04), 0 19px 39.1219px 0 rgba(44, 42, 42, 0.05), 0 51px 76px 0 rgba(44, 42, 42, 0.07);
+  box-shadow: 0px 1.7518px 7.66552px rgba(44, 42, 42, 0.0217013), 0px 4.43042px 15.1079px rgba(44, 42, 42, 0.0310596), 0px 9.03764px 24.5756px rgba(44, 42, 42, 0.0389404), 0px 18.6158px 39.1219px rgba(44, 42, 42, 0.0482987), 0px 51px 76px rgba(44, 42, 42, 0.07);
 }
 
 .laureate-photo.laureate-2019 {
@@ -877,18 +901,26 @@ body {
 
 .laureate-year {
   position: absolute;
-  left: 120px;
-  top: 28px;
+  left: -6%;
+  top: auto;
+  right: auto;
+  bottom: 17%;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
   font-family: DRUK, sans-serif;
   font-size: 50px;
   line-height: 1.66;
 }
 
 .laureate-year.laureate-right {
-  left: 170px;
-  top: 28px;
-  right: auto;
-  bottom: auto;
+  left: auto;
+  top: auto;
+  right: 2%;
+  bottom: 17%;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .text-block {
@@ -904,7 +936,10 @@ body {
 }
 
 .laureate-year-2020 {
-  color: #caf4f2;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  color: #e7e6fc;
 }
 
 .headline-h1 {
@@ -921,6 +956,34 @@ body {
 
 .laureate-year-2019 {
   color: #d3d2f6;
+}
+
+
+.background-laureate {
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.white-line {
+  position: absolute;
+  left: 66%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  width: 60px;
+  height: 250px;
+  background-color: #fcfcfa;
+}
+
+.white-line.white-line-2 {
+  left: 36%;
+  height: 80px;
+}
+
+.white-line.white-line-3 {
+  left: 5%;
 }
 
 .menu {
@@ -1910,6 +1973,28 @@ body {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+
+  .laureate-year {
+    left: 70%;
+    top: 26%;
+    bottom: auto;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .laureate-year.laureate-right {
+    right: 84%;
+    bottom: 49%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  .laureate-year-2020 {
+    color: #636363;
+  }
+  .laureate-year-2019 {
+    color: #636363;
+  }
   .menu-extended {
     display: none;
   }
@@ -2225,6 +2310,14 @@ body {
     font-size: 14px;
   }
 
+  video {
+    width: 100%;
+  }
+
+  .background-laureate {
+    border-radius: 0px;
+  }
+
   .partners-grid {
     grid-column-gap: 24px;
     grid-row-gap: 28px;
@@ -2256,6 +2349,80 @@ body {
   }
   .headline-h4.headline-lowercase.right-orientation {
     text-align: center;
+  }
+  .laureate {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .laureate-visual {
+    overflow: visible;
+    width: 100%;
+    height: 400px;
+  }
+  .laureate-visual.visual-right {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .laureate-about {
+    width: 100%;
+    margin-top: 70px;
+    padding-right: 24px;
+    padding-left: 24px;
+    text-align: center;
+  }
+  .laureate-visual-back {
+    overflow: hidden;
+    width: 100%;
+  }
+  .laureate-photo.laureate-shadow {
+    left: 0px;
+    top: 69px;
+    right: 0%;
+    width: 250px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .laureate-photo.laureate-2019.laureate-right.laureate-shadow {
+    right: 0px;
+  }
+  .laureate-year {
+    left: 39%;
+    top: -3%;
+    background-color: #fcfcfa;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .laureate-year.laureate-right {
+    right: 34%;
+    bottom: 80%;
+    background-color: transparent;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .laureate-year-2020 {
+    position: absolute;
+    right: -171.5px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    color: #d3d2f6;
+  }
+  .laureate-text {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+  }
+  .laureate-year-2019 {
+    color: #bebcef;
   }
   .maecenas-image {
     height: 200px;
@@ -2469,11 +2636,30 @@ body {
   .article__photo {
     height: 350px;
     margin: 32px 0;
+  }
 
+  .background-laureate {
+    border-radius: 0px;
+  }
+  .white-line {
+    left: 6%;
+  }
+  .white-line.white-line-2 {
+    left: 20%;
   }
 }
 
 @media screen and (max-width: 479px) {
+  .another-founder .founder-about {
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder-description {
+    margin-top: 18px;
+  }
+
   .gongadze-content__headline {
     margin-top: 50px;
     margin-bottom: 40px;
