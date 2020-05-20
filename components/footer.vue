@@ -4,7 +4,7 @@
       <nuxt-link to="/" aria-current="page" class="w-inline-block w--current">
         <div class="footer-logo"></div>
       </nuxt-link>
-      <div class="footer-icons">
+      <div class="footer-icons" style="display: none">
         <div class="footer-icon facebook"></div>
         <div class="footer-icon instagram"></div>
         <div class="footer-icon twitter"></div>
@@ -74,8 +74,8 @@
             </nuxt-link>
           </li>
           <li class="footer-sublink-item">
-            <nuxt-link to="/about/contacts" class="footer-sublink w-inline-block">
-              <div class="text-regular-12">Контакти</div>
+            <nuxt-link to="/about/team" class="footer-sublink w-inline-block">
+              <div class="text-regular-12">Команда Премії</div>
             </nuxt-link>
           </li>
         </ul>

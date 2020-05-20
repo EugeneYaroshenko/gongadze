@@ -85,20 +85,6 @@ body {
   opacity: 0;
 }
 
-.menu-show {
-  position: fixed;
-  top: 30px;
-  right: 24px;
-  z-index: 100;
-  width: 30px;
-  height: 30px;
-  background-image: url('../assets/images/menu-icon.png');
-  background-position: 50% 50%;
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
 .headline-h4 {
   margin: 24px auto 64px;
   padding-right: 0px;
@@ -1186,20 +1172,10 @@ body {
 .menu_extended__floating {
   position: absolute;
   width: 100%;
-}
-
-.menu_extended__floating.about-award {
-  top: 47px;
-  right: 0px;
-}
-
-.menu_extended__floating.award-projects {
-  top: 169px;
-}
-
-.menu_extended__floating.georgiy-gongadze {
-  top: 429px;
-  bottom: auto;
+  top: 54px;
+  bottom: 0;
+  margin: auto 0;
+  right: 0;
 }
 
 .close-icon {
@@ -2626,9 +2602,7 @@ body {
   .news-text {
     padding-bottom: 16px;
   }
-  .column-art {
-    display: none;
-  }
+
   .projects-decription {
     padding-right: 12px;
     padding-left: 12px;
@@ -3287,6 +3261,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.material-container:hover .material-about {
+  transform: translate3d(0, 60px, 0);
+}
+
+.material-container--alternative:hover .material-about--alternative {
+  transform: translate3d(0, -60px, 0);
 }
 
 .material-container.material-container--alternative {
@@ -3332,6 +3315,7 @@ body {
   background: #FCFCFA;
   color: #333;
   text-decoration: none;
+  transition: all 350ms ease;
   box-shadow: 0px 1.9021px 4.75524px rgba(0, 0, 0, 0.0104523), 0px 5.25905px 13.1476px rgba(0, 0, 0, 0.015), 0px 12.6618px 31.6544px rgba(0, 0, 0, 0.0195477), 0px 42px 105px rgba(0, 0, 0, 0.03);
 }
 
@@ -3376,9 +3360,6 @@ body {
 
 
 @media screen and (max-width: 991px) {
-  .title-screen__cover {
-    padding-right: 0px;
-  }
   .column-art {
     position: relative;
     top: auto;
@@ -3386,6 +3367,21 @@ body {
   }
   .material-about {
     width: 100%;
+  }
+
+  .title-screen__cover {
+    margin-left: 0px;
+    padding-right: 0px;
+    padding-top: 40px;
+  }
+  .title-screen__material {
+    position: absolute;
+    bottom: 54px;
+    margin-top: auto;
+    padding-top: 36px;
+  }
+  .scroll-down__container {
+    display: none;
   }
 }
 
@@ -3401,22 +3397,7 @@ body {
     margin-top: 40px;
     margin-bottom: 24px;
   }
-  .title-screen__cover {
-    margin-left: 0px;
-    padding-top: 40px;
-  }
-  .column-art {
-    display: none;
-  }
-  .title-screen__material {
-    position: absolute;
-    bottom: 54px;
-    margin-top: auto;
-    padding-top: 36px;
-  }
-  .scroll-down__container {
-    display: none;
-  }
+
   .title-screen__materials {
     padding-top: 24px;
   }
@@ -3478,7 +3459,7 @@ body {
     padding-left: 0px;
   }
   .title-screen__material {
-    bottom: 57px;
+    bottom: 32px;
     padding-top: 20px;
     padding-right: 16px;
     padding-bottom: 18px;

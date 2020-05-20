@@ -65,13 +65,12 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
-            <div class="flex-block-columns">
-              <div class="column-small">
-                <div class="photo-container"></div>
-              </div>
-              <div class="column-big column-big--right">
-                <div class="text-regular-20">Наприкінці 1991 р. у Тбілісі починається повстання проти першого президента незалежної Грузії Звіада Гамсахурдії. Батько Георгія, депутат Парламенту Грузії, був в опозиції до президента, за що потрапив у списки “ворогів народу”.</div>
+          <div class="biography-block text-only--block">
+            <div class="flex-block-rows">
+              <div class="flex-block-row row-text">
+                <div class="centered-block">
+                  <div class="text-regular-20">Наприкінці 1991 р. у Тбілісі починається повстання проти першого президента незалежної Грузії Звіада Гамсахурдії. Батько Георгія, депутат Парламенту Грузії, був в опозиції до президента, за що потрапив у списки “ворогів народу”.</div>
+                </div>
               </div>
             </div>
           </div>

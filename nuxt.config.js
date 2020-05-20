@@ -48,6 +48,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
+    ['vue-scrollto/nuxt', { duration: 800 }]
   ],
   axios: {
     baseURL: process.env.NODE_ENV === 'production' ? 'https://gongadzeprize.org' : 'http://localhost:3000'
