@@ -68,10 +68,20 @@
     align-items: center;
   }
 
-  .wp-block-image img {
-    max-width: 100%;
-    max-height: 600px;
+  .wp-block-image {
     margin: 24px auto;
+
+    img {
+      max-width: 100%;
+      max-height: 600px;
+    }
+
+    figcaption {
+      text-align: center;
+      margin-top: 0px;
+      font-size: .8em;
+      line-height: 1.6;
+    }
   }
 
   h3 {

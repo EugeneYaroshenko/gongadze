@@ -68,26 +68,24 @@
     align-items: center;
   }
 
-  .wp-block-image img {
-    max-width: 100%;
-    max-height: 600px;
+  .wp-block-image {
     margin: 24px auto;
+
+    img {
+      max-width: 100%;
+      max-height: 600px;
+    }
+
+    figcaption {
+      text-align: center;
+      margin-top: 0px;
+      font-size: .8em;
+      line-height: 1.6;
+    }
   }
 
   h3 {
     margin: 64px 0;
   }
-
-  /*a {*/
-    /*color: #7CCDCA;*/
-    /*font-weight: 600;*/
-    /*letter-spacing: .03em;*/
-    /*text-decoration: none;*/
-
-    /*&:hover {*/
-      /*color: #67CDC9;*/
-      /*text-decoration: underline;*/
-    /*}*/
-  /*}*/
 
 </style>
