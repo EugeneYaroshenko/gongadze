@@ -7517,6 +7517,11 @@ scriptjs@^2.5.9:
   resolved "https://registry.yarnpkg.com/scriptjs/-/scriptjs-2.5.9.tgz#343915cd2ec2ed9bfdde2b9875cd28f59394b35f"
   integrity sha512-qGVDoreyYiP1pkQnbnFAUIS5AjenNwwQBdl7zeos9etl+hYKWahjRTfzAZZYBv5xNHx7vNKCmaLDQZ6Fr2AEXg==
 
+scrollmagic@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/scrollmagic/-/scrollmagic-2.0.7.tgz#4139216f3849d226e38b3ef1e5dbbacf25190b35"
+  integrity sha512-Qu23XB3YTBhqbnTIkyVhVAEP/7r2APvW+QFfxCpd6LvJ5byCnlvSMzSeBdpyKbDKXBxVWGE9XFXUTvue3B7VrQ==
+
 scss-tokenizer@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
@@ -8680,6 +8685,15 @@ vue-router@^3.0.6:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.2.tgz#2e0904703545dabdd42b2b7a2e617f02f99a1969"
   integrity sha512-WssQEHSEvIS1/CI4CO2T8LJdoK4Q9Ngox28K7FDNMTfzNTk2WS5D0dDlqYCaPG+AG4Z8wJkn1KrBc7AhspZJUQ==
+
+vue-scrollmagic@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue-scrollmagic/-/vue-scrollmagic-1.2.0.tgz#d29b0f0d01233d270f60d494d21d192da64c1787"
+  integrity sha512-4n+c35mHzEJeNdPShhXFVE9CY0e0318deAQtIF09Dglj4NKcYJXThTKic3gMMLCtyPwEj3derHlGg2Nsquzaaw==
+  dependencies:
+    gsap "^2.1.3"
+    scrollmagic "^2.0.7"
+    vue "^2.6.10"
 
 vue-scrollto@^2.18.1:
   version "2.18.1"

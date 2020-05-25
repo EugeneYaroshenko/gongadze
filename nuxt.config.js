@@ -42,6 +42,12 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
+  plugins: [
+    {
+      src: '~plugins/vueScrollmagic.js',
+      ssr: false
+    }
+  ],
   devModules: [],
   /*
   ** Nuxt.js modules
@@ -67,6 +73,4 @@ module.exports = {
       'gsap/umd/EasePack'
     ]
   },
-  plugins: []
-
 }

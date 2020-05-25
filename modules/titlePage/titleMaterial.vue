@@ -1,6 +1,6 @@
 <template>
   <div v-if="post">
-    <div class="title-screen__material" @click="redirectTo(postCategory, post.slug)">
+    <div class="title-screen__material" ref="titleMaterial" @click="redirectTo(postCategory, post.slug)">
       <div class="material__topic">
         <div class="text-light-14">{{ postCategory.name }}</div>
       </div>
@@ -17,6 +17,10 @@
 </template>
 
 <script>
+  import TimelineMax from 'gsap/umd/TimelineMax'
+  import TweenMax from 'gsap/umd/TweenMax'
+  import EasePack from 'gsap/umd/EasePack'
+
   export default {
     props: {
       post: {
@@ -29,6 +33,20 @@
         default: () => [],
         required: true
       }
+    },
+    mounted() {
+      const t = new TimelineMax()
+
+      t.add(TweenMax.to(
+        this.$refs.titleMaterial,
+        .5,
+        {
+          transform: 'translate3d(0, 0, 0)',
+          opacity: 1,
+          delay: .8
+        }
+      ))
+
     },
     computed: {
       postCategory () {

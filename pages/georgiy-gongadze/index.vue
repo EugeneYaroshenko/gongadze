@@ -7,12 +7,14 @@
       <h4 class="headline-h4">Біографія</h4>
       <div class="gongadze-content--condensed">
         <div class="biography-content">
-          <div class="biography-block">
+          <div ref="trigger1"></div>
+          <div ref="biography1" class="biography-block">
             <div class="centered-block">
               <div class="text-regular-20">Український журналіст. Народився 21 травня 1969 р. у Тбілісі.</div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger2"></div>
+          <div ref="biography2" class="biography-block">
             <div class="flex-block-columns">
               <div class="column-big">
                 <div class="text-regular-20">Дитинство та юність Георгій (для друзів та рідних – Гія) провів у Грузії, щороку відвідуючи Львів, де проживала родина матері Олександри. Георгій був активною дитиною, художником, спортсменом, молодіжним чемпіоном Грузії з бігу на короткі дистанції. Після школи він вступив до Інституту міжнародних відносин.</div>
@@ -22,7 +24,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger3"></div>
+          <div ref="biography3" class="biography-block">
             <div class="flex-block-columns">
               <div class="column-small">
                 <div class="photo-container photo-war"></div>
@@ -32,7 +35,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger4"></div>
+          <div ref="biography4" class="biography-block">
             <div class="flex-block-rows">
               <div class="flex-block-row row-text">
                 <div class="centered-block">
@@ -44,7 +48,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block text-only--block">
+          <div ref="trigger5"></div>
+          <div ref="biography5" class="biography-block text-only--block">
             <div class="flex-block-rows">
               <div class="flex-block-row row-text">
                 <div class="centered-block">
@@ -53,7 +58,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger6"></div>
+          <div ref="biography6" class="biography-block">
             <div class="flex-block-rows">
               <div class="photo-row photo-row--top">
                 <div class="photo-container photo-container__horizontal photo-student"></div>
@@ -65,7 +71,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block text-only--block">
+          <div ref="trigger7"></div>
+          <div ref="biography7" class="biography-block text-only--block">
             <div class="flex-block-rows">
               <div class="flex-block-row row-text">
                 <div class="centered-block">
@@ -74,7 +81,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger8"></div>
+          <div ref="biography8" class="biography-block">
             <div class="flex-block-columns">
               <div class="column-big">
                 <div class="text-regular-20">Георгій вирішив повернутися до Тбілісі, щоб підтримати батька. Він приєднується до повстання як медбрат, але згодом бере в руки камеру. В результаті на світ народжується його перший документальний фільм “Біль землі моєї”. <br><br>Пізніше як журналіст Георгій працював під час Грузинсько-Російської війни в Абхазії, де отримав важке осколкове поранення.</div>
@@ -84,7 +92,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger9"></div>
+          <div ref="biography9" class="biography-block">
             <div class="flex-block-rows">
               <div class="photo-row photo-row--top">
                 <div class="photo-container photo-container__horizontal gongadze-w-wife"></div>
@@ -96,7 +105,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger10"></div>
+          <div ref="biography10" class="biography-block">
             <div class="flex-block-columns">
               <div class="column-small">
                 <div class="photo-container photo-analytics"></div>
@@ -106,7 +116,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger11"></div>
+          <div ref="biography11" class="biography-block">
             <div class="flex-block-rows">
               <div class="flex-block-row row-text">
                 <div class="centered-block">
@@ -118,7 +129,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block text-only--block">
+          <div ref="trigger12"></div>
+          <div ref="biography12" class="biography-block text-only--block">
             <div class="flex-block-rows">
               <div class="flex-block-row row-text">
                 <div class="centered-block">
@@ -127,7 +139,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block">
+          <div ref="trigger13"></div>
+          <div ref="biography13" class="biography-block">
             <div class="flex-block-rows">
               <div class="photo-row photo-row--top">
                 <div class="photo-container photo-container__horizontal gongadze-v-kuchma"></div>
@@ -139,7 +152,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block text-only--block">
+          <div ref="trigger14"></div>
+          <div ref="biography14" class="biography-block text-only--block">
             <div class="flex-block-rows">
               <div class="flex-block-row row-text">
                 <div class="centered-block">
@@ -148,7 +162,8 @@
               </div>
             </div>
           </div>
-          <div class="biography-block text-only--block">
+          <div ref="trigger15"></div>
+          <div ref="biography15" class="biography-block text-only--block">
             <div class="flex-block-rows">
               <div class="flex-block-row row-text">
                 <div class="centered-block">
@@ -164,8 +179,33 @@
 </template>
 
 <script>
+  import TimelineMax from 'gsap/umd/TimelineMax'
+  import TweenMax from 'gsap/umd/TweenMax'
+  import EasePack from 'gsap/umd/EasePack'
+
   export default {
-    layout: 'default'
+    layout: 'default',
+    mounted () {
+      for (let i = 1; i <= 15; i++) {
+        const t = new TimelineMax()
+
+        t.add(TweenMax.to(
+          this.$refs[`biography${i}`],
+          0.450,
+          {
+            transform: 'translate3d(0, 0, 0)',
+            opacity: 1,
+            ease: EasePack.Sine.easeOut
+          }
+        ),)
+
+        const scene = this.$scrollmagic
+        .scene({ triggerElement: this.$refs[`trigger${i}`], duration: 450, reverse: false })
+        .setTween(t)
+
+        this.$scrollmagic.addScene(scene)
+      }
+    },
   }
 </script>
 

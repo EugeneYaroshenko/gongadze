@@ -2,18 +2,18 @@
   <div>
     <div class="gongadze-content first-page">
       <div class="title-screen__cover">
-        <div class="column-art">
+        <div class="column-art" ref="columnArt">
           <div class="art"/>
         </div>
         <div class="column">
-          <h1 class="title-screen__heading">Премія <br>Імені<br>Георгія <br>Ґонґадзе</h1>
+          <h1 class="title-screen__heading" ref="websiteHeading">Премія <br>Імені<br>Георгія <br>Ґонґадзе</h1>
           <title-material
             v-if="firstPageMaterials && firstPageMaterials.length"
             :post="titleMaterial"
             :redirect-to="redirectTo"
           />
-          <div class="scroll-down__container" v-scroll-to="'#other-materials'">
-            <div class="scroll-down--additional"></div>
+          <div class="scroll-down__container" v-scroll-to="'#other-materials'" ref="scrollMain">
+            <div class="scroll-down--additional" ref="scrollAdditional"></div>
             <div class="scroll-down__icon"></div>
           </div>
         </div>
@@ -30,69 +30,71 @@
           />
         </div>
       </div>
-      <h1 class="headline-h4 first-page-headline">Партнери</h1>
-      <div class="partners-block">
-        <div class="w-layout-grid partners-grid">
-          <a href="https://pen.org.ua" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon pen-ukraine"></div>
-          </a>
-          <a href="https://www.pravda.com.ua" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon ukrainska-pravda"></div>
-          </a>
-          <a href="https://www.facebook.com/kmbsalumni/" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon kmbs-alumni"></div>
-          </a>
+      <div class="partners">
+        <h1 class="headline-h4 first-page-headline">Партнери</h1>
+        <div class="partners-block">
+          <div class="w-layout-grid partners-grid">
+            <a href="https://pen.org.ua" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon pen-ukraine"></div>
+            </a>
+            <a href="https://www.pravda.com.ua" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon ukrainska-pravda"></div>
+            </a>
+            <a href="https://www.facebook.com/kmbsalumni/" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon kmbs-alumni"></div>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="partner-subheading">
-        <div class="text-semibold-20">Генеральний медіапартнер</div>
-      </div>
-      <div class="partners-block">
-        <div class="partner">
-          <a href="https://culture.suspilne.media" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon ua-kultura"></div>
-          </a>
+        <div class="partner-subheading">
+          <div class="text-semibold-20">Генеральний медіапартнер</div>
         </div>
-      </div>
-      <div class="partner-subheading">
-        <div class="text-semibold-20">Інформаційні партнери</div>
-      </div>
-      <div class="partners-block">
-        <div class="w-layout-grid partners-grid">
-          <a href="https://www.radiosvoboda.org" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon radio-svoboda"></div>
-          </a>
-          <a href="https://detector.media/" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon detector-media"></div>
-          </a>
-          <a href="https://internews.ua" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon internews-ukraine"></div>
-          </a>
-          <a href="https://imi.org.ua" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon imi-logo"></div>
-          </a>
-          <a href="https://nachasi.com" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon na-chasi"></div>
-          </a>
-          <a href="https://mind.ua" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon mind-logo"></div>
-          </a>
-          <a href="https://hromadske.ua" class="partner-icon__container w-inline-block">
-            <div class="partner-icon hromadske-logo"></div>
-          </a>
+        <div class="partners-block">
+          <div class="partner">
+            <a href="https://culture.suspilne.media" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon ua-kultura"></div>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="partner-subheading">
-        <div class="text-semibold-20"> Організаційні партнери</div>
-      </div>
-      <div class="partners-block">
-        <div class="w-layout-grid partners-grid organizational-partners-grid">
-          <a href="http://twiga.com.ua/" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon twiga"></div>
-          </a>
-          <a href="https://kmbs.ua/" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon kmbs-logo"></div>
-          </a>
+        <div class="partner-subheading">
+          <div class="text-semibold-20">Інформаційні партнери</div>
+        </div>
+        <div class="partners-block">
+          <div class="w-layout-grid partners-grid">
+            <a href="https://www.radiosvoboda.org" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon radio-svoboda"></div>
+            </a>
+            <a href="https://detector.media/" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon detector-media"></div>
+            </a>
+            <a href="https://internews.ua" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon internews-ukraine"></div>
+            </a>
+            <a href="https://imi.org.ua" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon imi-logo"></div>
+            </a>
+            <a href="https://nachasi.com" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon na-chasi"></div>
+            </a>
+            <a href="https://mind.ua" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon mind-logo"></div>
+            </a>
+            <a href="https://hromadske.ua" class="partner-icon__container w-inline-block">
+              <div class="partner-icon hromadske-logo"></div>
+            </a>
+          </div>
+        </div>
+        <div class="partner-subheading">
+          <div class="text-semibold-20"> Організаційні партнери</div>
+        </div>
+        <div class="partners-block">
+          <div class="w-layout-grid partners-grid organizational-partners-grid">
+            <a href="http://twiga.com.ua/" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon twiga"></div>
+            </a>
+            <a href="https://kmbs.ua/" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon kmbs-logo"></div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +104,59 @@
 <script>
   import titleMaterial from '~/modules/titlePage/titleMaterial'
   import otherMaterial from '~/modules/titlePage/otherMaterial'
+  import TimelineMax from 'gsap/umd/TimelineMax'
+  import TweenMax from 'gsap/umd/TweenMax'
+  import EasePack from 'gsap/umd/EasePack'
   import { mapState } from 'vuex'
 
   export default {
     layout: 'default',
+    mounted () {
+      const t = new TimelineMax()
+
+      t.add(TweenMax.to(
+        this.$refs.websiteHeading,
+        1,
+        {
+          transform: 'translate3d(0, 0, 0)',
+          opacity: 1,
+          ease: EasePack.Sine.easeOut,
+          delay: .2,
+        }
+      ), "first")
+
+      t.add(TweenMax.to(
+        this.$refs.columnArt,
+        1,
+        {
+          transform: 'translate3d(0, 0, 0)',
+          opacity: 1,
+          ease: EasePack.Sine.easeOut,
+        }
+      ), "first")
+
+      t.add(TweenMax.to(
+        this.$refs.scrollMain,
+        .3,
+        {
+          transform: 'translate3d(0, 0, 0)',
+          opacity: 1,
+          ease: EasePack.Sine.easeOut,
+        }
+      ), "second")
+
+      t.add(TweenMax.to(
+        this.$refs.scrollAdditional,
+        .45,
+        {
+          transform: 'translate3d(0, 0, 0)',
+          opacity: 1,
+          ease: EasePack.Back.easeOut.config(2.7),
+          delay: .2
+        }
+      ), "second")
+
+    },
     computed: {
       ...mapState({
                     postsByCategory: state => state.data.postsByCategory,

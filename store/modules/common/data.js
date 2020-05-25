@@ -5,8 +5,6 @@ import 'moment/locale/uk';
 
 moment.locale('uk');
 
-console.log(moment().format('dddd'))
-
 const simplifiedPost = function (post) {
   return {
     id: post.ID,
