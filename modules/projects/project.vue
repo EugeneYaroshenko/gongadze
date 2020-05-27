@@ -9,9 +9,9 @@
             <div class="text-bold-18"><strong>{{ post.title }}</strong></div>
           </div>
         </div>
-        <div class="publication-read">
-          <div class="text-bold-18">Читати</div>
-        </div>
+        <!--<div class="publication-read">-->
+          <!--<div class="text-bold-18">Читати</div>-->
+        <!--</div>-->
       </div>
     </div>
   </div>

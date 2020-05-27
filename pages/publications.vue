@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="gongadze-content">
-      <div class="gongadze-content__headline">
-        <h3 class="headline-h3">публікації</h3>
-      </div>
-      <div v-if="publicationCategory">
+      <div v-if="publicationCategory" class="project-container">
+        <h4 class="headline-h4 headline-with-subtext">Публікації</h4>
         <div class="gongadze-content--condensed">
           <div class="projects-decription">
             <div class="text-regular-20">{{ publicationCategory.description }}</div>

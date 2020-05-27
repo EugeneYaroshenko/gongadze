@@ -155,7 +155,7 @@
             </div>
             <div class="menu-item">
               <nuxt-link to="/publications" class="menu-item__text w-inline-block" @click.native="hideMenu">
-                <div class="text-bold-28">Новини</div>
+                <div class="text-bold-28">Публікації</div>
               </nuxt-link>
             </div>
             <div class="menu-item">
@@ -236,32 +236,32 @@
               <div class="subname-items">
                 <ul role="list" class="subname-items__list">
                   <li class="subname-item">
-                    <nuxt-link to="about" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <nuxt-link to="/about" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>Засновники</div>
                     </nuxt-link>
                   </li>
                   <li class="subname-item">
-                    <nuxt-link to="about/concept" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <nuxt-link to="/about/concept" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>концепція премії</div>
                     </nuxt-link>
                   </li>
                   <li class="subname-item">
-                    <nuxt-link to="about/kapitula" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <nuxt-link to="/about/kapitula" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>Капітула Премії</div>
                     </nuxt-link>
                   </li>
                   <li class="subname-item">
-                    <nuxt-link to="about/laureates" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <nuxt-link to="/about/laureates" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>Лауреати Премії</div>
                     </nuxt-link>
                   </li>
                   <li class="subname-item">
-                    <nuxt-link to="about/maecenas" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <nuxt-link to="/about/maecenas" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>Меценати Премії</div>
                     </nuxt-link>
                   </li>
                   <li class="subname-item">
-                    <nuxt-link to="about/team" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <nuxt-link to="/about/team" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div>Команда Премії</div>
                     </nuxt-link>
                   </li>

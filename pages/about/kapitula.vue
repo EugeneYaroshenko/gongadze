@@ -1,10 +1,7 @@
 <template>
   <div>
     <div class="gongadze-content">
-      <div class="gongadze-content__headline">
-        <h3 class="headline-h3">про премію</h3>
-      </div>
-      <div class="gongadze-content--condensed">
+      <div class="gongadze-content--condensed project-container">
         <h4 class="headline-h4">Капітула Премії</h4>
         <div class="kapitula-about">
           <div class="kapitula-text-container">

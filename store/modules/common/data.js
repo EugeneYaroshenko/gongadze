@@ -34,7 +34,8 @@ const getters = {
 
 const mutations = {
   [types.GET_POSTS_REQUEST] (state) {
-    state.posts = null
+    state.postsByCategory = null
+    state.allPosts = null
     state.request = { ...state.request, fetched: false, loading: true }
   },
   [types.GET_POSTS_SUCCESS] (state, response) {

@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div class="gongadze-content">
-      <div class="gongadze-content__headline">
-        <h3 class="headline-h3">георгій Ґонґадзе</h3>
-      </div>
+    <div class="gongadze-content project-container">
       <h4 class="headline-h4">Біографія</h4>
       <div class="gongadze-content--condensed">
         <div class="biography-content">

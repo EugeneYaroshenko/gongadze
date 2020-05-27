@@ -1,14 +1,11 @@
 <template>
   <div>
     <div class="gongadze-content">
-      <div class="gongadze-content__headline">
-        <h3 class="headline-h3">новини</h3>
-      </div>
-      <div class="gongadze-content--condensed">
+      <div class="gongadze-content--condensed project-container">
         <div class="w-layout-grid news-grid" v-if="newsPosts">
           <main-news :post="newsPosts[0]" :redirect-to="redirectTo" />
           <div v-for="(post, index) in newsPosts.slice(1)" :key="index">
-            <news :post="post" :redirect-to="redirectTo"/>
+            <project :post="post" :redirect-to="redirectTo"/>
           </div>
         </div>
       </div>
@@ -18,7 +15,7 @@
 
 <script>
   import { mapState } from 'vuex'
-  import News from '~/modules/newsFeed/news'
+  import Project from '~/modules/projects/project'
   import MainNews from '~/modules/newsFeed/mainNews'
 
   export default {
@@ -40,12 +37,12 @@
       },
     },
     components: {
-      News,
+      Project,
       MainNews
     },
     methods: {
       redirectTo(postSlug) {
-        return this.$router.push(`/news/?cat_id=${this.newsCategory.id}&title=${postSlug}`)
+        return this.$router.push(`/article/?cat_id=${this.newsCategory.id}&title=${postSlug}`)
       },
     }
   }

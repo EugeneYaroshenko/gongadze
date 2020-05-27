@@ -1,22 +1,19 @@
 <template>
   <div>
       <div class="gongadze-content">
-        <div class="gongadze-content__headline">
-          <h3 class="headline-h3">проєкти премії</h3>
-        </div>
-        <div v-if="projectCategory">
+        <div v-if="projectCategory" class="projects-layout">
           <h4 class="headline-h4 headline-with-subtext">{{ projectCategory.name }}</h4>
           <div class="gongadze-content--condensed">
             <div class="projects-decription">
               <div class="text-regular-20">{{ projectCategory.description }}</div>
             </div>
+            <div class="w-layout-grid publications-grid">
+              <div v-for="(post, index) in categoryPosts" :key="index">
+                <project :post="post" :redirect-to="redirectTo"/>
+              </div>
+            </div>
           </div>
       </div>
-        <div class="w-layout-grid publications-grid">
-          <div v-for="(post, index) in categoryPosts" :key="index">
-            <project :post="post" :redirect-to="redirectTo"/>
-          </div>
-        </div>
     </div>
   </div>
 </template>
@@ -29,13 +26,6 @@
     components: {
       project
     },
-    // watch: {
-    //   '$route.path': function () {
-    //     console.log('updating')
-    //     this.selectCategory()
-    //     this.$forceUpdate()
-    //   }
-    // },
     props: {
       posts: {
         type: Object,
@@ -87,4 +77,7 @@
 </script>
 
 <style lang="scss" scoped>
+  .projects-layout {
+    padding-top: 120px;
+  }
 </style>
