@@ -53,7 +53,7 @@
   import { mapState } from 'vuex'
 
   export default {
-    layout: 'default',
+    layout: 'titleLayout',
     mounted () {
       const t = new TimelineMax()
 
