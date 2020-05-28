@@ -19,91 +19,34 @@
         </div>
       </div>
       <div class="title-screen__materials" id="other-materials" v-if="otherMaterials">
-        <div
-          v-for="(post, index) in otherMaterials"
-          :key="index"
-        >
-          <other-material
-            :post="post"
-            :postIndex="index"
+        <div class="w-layout-grid grid__articles">
+          <material
+            v-for="(post, index) in otherMaterials"
             :redirect-to="redirectTo"
+            :post="post"
+            :key="index"
           />
         </div>
-      </div>
-      <div class="partners">
-        <h1 class="headline-h4 first-page-headline">Партнери</h1>
-        <div class="partners-block">
-          <div class="w-layout-grid partners-grid">
-            <a href="https://pen.org.ua" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon pen-ukraine"></div>
-            </a>
-            <a href="https://www.pravda.com.ua" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon ukrainska-pravda"></div>
-            </a>
-            <a href="https://www.facebook.com/kmbsalumni/" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon kmbs-alumni"></div>
-            </a>
-          </div>
-        </div>
-        <div class="partner-subheading">
-          <div class="text-semibold-20">Генеральний медіапартнер</div>
-        </div>
-        <div class="partners-block">
-          <div class="partner">
-            <a href="https://culture.suspilne.media" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon ua-kultura"></div>
-            </a>
-          </div>
-        </div>
-        <div class="partner-subheading">
-          <div class="text-semibold-20">Інформаційні партнери</div>
-        </div>
-        <div class="partners-block">
-          <div class="w-layout-grid partners-grid">
-            <a href="https://www.radiosvoboda.org" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon radio-svoboda"></div>
-            </a>
-            <a href="https://detector.media/" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon detector-media"></div>
-            </a>
-            <a href="https://internews.ua" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon internews-ukraine"></div>
-            </a>
-            <a href="https://imi.org.ua" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon imi-logo"></div>
-            </a>
-            <a href="https://nachasi.com" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon na-chasi"></div>
-            </a>
-            <a href="https://mind.ua" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon mind-logo"></div>
-            </a>
-            <a href="https://hromadske.ua" class="partner-icon__container w-inline-block">
-              <div class="partner-icon hromadske-logo"></div>
-            </a>
-          </div>
-        </div>
-        <div class="partner-subheading">
-          <div class="text-semibold-20"> Організаційні партнери</div>
-        </div>
-        <div class="partners-block">
-          <div class="w-layout-grid partners-grid organizational-partners-grid">
-            <a href="http://twiga.com.ua/" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon twiga"></div>
-            </a>
-            <a href="https://kmbs.ua/" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon kmbs-logo"></div>
-            </a>
-          </div>
-        </div>
+        <!--<div-->
+          <!--v-for="(post, index) in otherMaterials"-->
+          <!--:key="index"-->
+        <!--&gt;-->
+          <!--<other-material-->
+            <!--:post="post"-->
+            <!--:postIndex="index"-->
+            <!--:redirect-to="redirectTo"-->
+          <!--/>-->
+        <!--</div>-->
       </div>
     </div>
+    <partners />
   </div>
 </template>
 
 <script>
   import titleMaterial from '~/modules/titlePage/titleMaterial'
-  import otherMaterial from '~/modules/titlePage/otherMaterial'
+  import Material from '~/modules/titlePage/material'
+  import Partners from '~/modules/titlePage/partners'
   import TimelineMax from 'gsap/umd/TimelineMax'
   import TweenMax from 'gsap/umd/TweenMax'
   import EasePack from 'gsap/umd/EasePack'
@@ -200,7 +143,8 @@
     },
     components: {
       titleMaterial,
-      otherMaterial
+      Partners,
+      Material
     }
   }
 </script>
@@ -220,6 +164,17 @@
     background-repeat: no-repeat;
   }
 
+  .grid__articles {
+    padding-right: 0px;
+    padding-left: 0px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    grid-column-gap: 54px;
+    grid-row-gap: 32px;
+  }
+
   @media screen and (max-width: 991px) {
     .column-art {
       position: absolute;
@@ -233,6 +188,13 @@
       display: block;
       background: transparent;
       box-shadow: none;
+    }
+
+    .grid__articles {
+      padding-right: 40px;
+      padding-left: 40px;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -248,6 +210,19 @@
 
     .title-screen__cover {
       padding-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .grid__articles {
+      grid-row-gap: 54px;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .grid__articles {
+      padding-right: 0px;
+      padding-left: 0px;
     }
   }
 

@@ -2,7 +2,7 @@
   <div @click="redirectTo(post.slug)" class="publication-container w-inline-block">
     <div class="publication-image journalism-change" :style="{ backgroundImage: `url('${post.post_image}')` }"></div>
     <div class="publication-info__container">
-      <div class="publication-info">
+      <div class="publication-info" :style="{ background: `${postColor()}` }">
         <div class="publication-description">
           <div class="publication-date">{{ post.date }}</div>
           <div class="publication-name">
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+  import { colorsPalette } from '~/config/UI'
+
   export default {
     props: {
       post: {
@@ -29,8 +31,18 @@
         type: Function,
         default: () => {},
         required: true
+      },
+      color: {
+        type: String,
+        default: '#D2F0F6',
+        required: false
       }
     },
+    methods: {
+      postColor () {
+        return this.color
+      }
+    }
   }
 </script>
 

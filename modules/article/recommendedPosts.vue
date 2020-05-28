@@ -6,7 +6,7 @@
           <div
             class="article-recommendation__photo"
             :style="{ backgroundImage: `url('${recommendedPost.post_image}')` }"/>
-          <div class="article-recommendation__info">
+          <div class="article-recommendation__info" :style="{ background: `${postColor()}` }">
             <div class="info__date">
               <div class="text-regular-14">{{ recommendedPost.date }}</div>
             </div>
@@ -37,6 +37,11 @@
         type: Function,
         required: true,
         default: () => []
+      },
+      color: {
+        type: String,
+        default: '#D2F0F6',
+        required: false
       }
     },
     methods: {
@@ -46,6 +51,9 @@
       changePost (post) {
         window.scrollTo(0, 0)
         this.updatePost(post)
+      },
+      postColor () {
+        return this.color
       }
     }
   }
@@ -77,8 +85,8 @@
       cursor: pointer;
 
       &:hover {
-        .article-recommendation__info {
-          background: #BEBCEF;
+        .info__name {
+          text-decoration: underline;
         }
       }
     }

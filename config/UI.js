@@ -5,3 +5,10 @@ export const pidrubriki = {
   'profession-stay': 'Лишаюсь у професії',
   'publications': 'Публікації'
 }
+
+
+export const colorsPalette = {
+  'publications': '#d3d2f6',
+  'news-feed': '#FEFFCF',
+  'other': '#D2F0F6'
+}

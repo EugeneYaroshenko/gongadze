@@ -9,7 +9,7 @@
           </div>
           <div class="w-layout-grid publications-grid" v-if="publicationCategory && publicationPosts">
             <div v-for="(post, index) in publicationPosts" :key="index">
-              <project :post="post" :redirect-to="redirectTo"/>
+              <project :post="post" :redirect-to="redirectTo" :color="postColor"/>
             </div>
           </div>
         </div>
@@ -19,8 +19,9 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import { mapState } from 'vuex';
   import project from '~/modules/projects/project';
+  import { colorsPalette } from '~/config/UI';
 
   export default {
     layout: 'default',
@@ -39,6 +40,9 @@
           return null
         }
       },
+      postColor() {
+        return colorsPalette['publications']
+      }
     },
     components: {
       project

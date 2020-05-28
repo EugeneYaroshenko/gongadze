@@ -9,7 +9,7 @@
             </div>
             <div class="w-layout-grid publications-grid">
               <div v-for="(post, index) in categoryPosts" :key="index">
-                <project :post="post" :redirect-to="redirectTo"/>
+                <project :post="post" :redirect-to="redirectTo" :color="postColor"/>
               </div>
             </div>
           </div>
@@ -20,6 +20,7 @@
 
 <script>
   import project from '~/modules/projects/project';
+  import { colorsPalette } from '~/config/UI';
 
   export default {
     scrollToTop: true,
@@ -62,7 +63,9 @@
         } else {
           return this.$router.push(`/error`)
         }
-
+      },
+      postColor() {
+        return colorsPalette['other']
       },
       categoryPosts () {
         if (this.projectCategory) {

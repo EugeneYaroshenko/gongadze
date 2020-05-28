@@ -3,9 +3,9 @@
     <div class="gongadze-content">
       <div class="gongadze-content--condensed project-container">
         <div class="w-layout-grid news-grid" v-if="newsPosts">
-          <main-news :post="newsPosts[0]" :redirect-to="redirectTo" />
+          <main-news :post="newsPosts[0]" :redirect-to="redirectTo" :color="postColor" />
           <div v-for="(post, index) in newsPosts.slice(1)" :key="index">
-            <project :post="post" :redirect-to="redirectTo"/>
+            <project :post="post" :redirect-to="redirectTo" :color="postColor"/>
           </div>
         </div>
       </div>
@@ -17,6 +17,7 @@
   import { mapState } from 'vuex'
   import Project from '~/modules/projects/project'
   import MainNews from '~/modules/newsFeed/mainNews'
+  import { colorsPalette } from '~/config/UI'
 
   export default {
     layout: 'default',
@@ -35,6 +36,9 @@
           return null
         }
       },
+      postColor() {
+        return colorsPalette['news-feed']
+      }
     },
     components: {
       Project,

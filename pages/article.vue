@@ -22,6 +22,7 @@
             :recommended-posts="recommendedPosts"
             :category-id="category.id"
             :update-post="updatePost"
+            :color="postColor(category.slug)"
           />
         </div>
       </div>
@@ -30,8 +31,9 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
-  import RecommendedArticles from '~/modules/article/recommendedPosts'
+  import { mapState } from 'vuex';
+  import RecommendedArticles from '~/modules/article/recommendedPosts';
+  import { colorsPalette } from '~/config/UI';
 
   export default {
     layout: 'articleLayout',
@@ -87,6 +89,9 @@
     methods: {
       updatePost (post) {
         this.postForMeta = post
+      },
+      postColor (slug) {
+        return colorsPalette[slug] ? colorsPalette[slug] : colorsPalette.other
       }
     },
     computed: {
