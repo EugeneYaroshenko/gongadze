@@ -121,10 +121,10 @@
         return `https://www.facebook.com/sharer/sharer.php?u=#${process.env.baseUrl}/${this.$route.fullPath}`
       },
       telegramSharePath() {
-        return `https://telegram.me/share/url?url=${process.env.baseUrl}/${this.$route.fullPath}&text=${this.post.title}`
+        return `https://telegram.me/share/url?url=${process.env.baseUrl}/${this.$route.fullPath}`
       },
       twitterSharePath() {
-        return `http://twitter.com/share?text=${this.post.title}&url=${process.env.baseUrl}/${this.$route.fullPath}`
+        return `http://twitter.com/share?url=${process.env.baseUrl}/${this.$route.fullPath}`
       },
       mailSharePath() {
         return `mailto:?subject=${this.post.title}&body=${process.env.baseUrl}/${this.$route.fullPath}`
