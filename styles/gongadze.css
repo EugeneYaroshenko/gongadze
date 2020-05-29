@@ -1,3 +1,28 @@
+.loading-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 500ms ease-in;
+}
+.fade-enter, .fade-leave-to {
+  transform: translate3d(0, 3%, 0);
+  opacity: 0.5;
+}
+
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }
@@ -986,11 +1011,21 @@ body {
   left: 0px;
   top: 0px;
   right: 0px;
+  transform: translate3d(5%, 0, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-in;
   z-index: 1000;
   display: flex;
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(94deg, rgba(252, 252, 250, 0.95) 11%, #fcfcfa);
+}
+
+.menu--shown {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .menu-extended {
@@ -1008,7 +1043,6 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 30px;
   padding-right: 16px;
   padding-bottom: 30px;
   -webkit-box-orient: vertical;
@@ -1095,6 +1129,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-left: 8px;
+  margin-top: 43px;
 }
 
 .menu-icon {
@@ -1117,6 +1152,20 @@ body {
 
 .menu-icon.instagram {
   background-image: url('../assets/images/Group-11.svg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu-icon.telegram {
+  background-image: url('../assets/images/telegram.svg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu-icon.mail {
+  background-image: url('../assets/images/mail.svg');
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1537,8 +1586,8 @@ body {
 }
 
 .publication-container:hover .publication-info {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 98.8%, 0.79)), to(#fff));
-  background-image: linear-gradient(180deg, hsla(0, 0%, 98.8%, 0.79), #fff);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 98.8%, 0.79)), to(#fff)) !important;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 98.8%, 0.79), #fff) !important;
   box-shadow: 0 3px 2.21381px 0 hsla(0, 0%, 76.1%, 0.02), 0 7px 5.32008px 0 hsla(0, 0%, 76.1%, 0.03), 0 13px 10.0172px 0 hsla(0, 0%, 76.1%, 0.04), 0 22px 17.869px 0 hsla(0, 0%, 76.1%, 0.04), 0 42px 33.4221px 0 hsla(0, 0%, 76.1%, 0.05), 0 42px 33.4221px 0 hsla(0, 0%, 76.1%, 0.05), 0 100px 80px 0 hsla(0, 0%, 76.1%, 0.07);
   -webkit-transform: translate(0px, -30px);
   -ms-transform: translate(0px, -30px);
@@ -1739,9 +1788,6 @@ body {
   padding: 0px;
   border-radius: 8px;
   background-color: #fcfcfa;
-  background-image: -webkit-gradient(linear, left top, right top, from(hsla(0, 0%, 98.8%, 0.1)), to(#fff));
-  background-image: linear-gradient(90deg, hsla(0, 0%, 98.8%, 0.1), #fff);
-  box-shadow: 0 3px 2.21381px 0 hsla(0, 0%, 76.1%, 0.02), 0 7px 5.32008px 0 hsla(0, 0%, 76.1%, 0.03), 0 13px 10.0172px 0 hsla(0, 0%, 76.1%, 0.04), 0 22px 17.869px 0 hsla(0, 0%, 76.1%, 0.04), 0 42px 33.4221px 0 hsla(0, 0%, 76.1%, 0.05), 0 100px 80px 0 hsla(0, 0%, 76.1%, 0.07);
   color: #333;
   text-decoration: none;
 }
@@ -1802,9 +1848,12 @@ body {
   padding: 120px 0 32px;
 }
 
+.article__photo-container {
+  margin: 0 0 50px;
+}
+
 .article__photo {
   height: 500px;
-  margin: 0 0 50px;
   background-image: url('../assets/images/publication-1.png');
   background-position: center top;
   background-size: cover;
@@ -1886,6 +1935,7 @@ body {
   }
   .menu-items {
     padding-right: 0px;
+    padding-bottom: 0;
   }
   .menu-item {
     margin-top: 0px;
@@ -1894,10 +1944,7 @@ body {
     padding-bottom: 18px;
   }
   .menu-icons {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    padding-left: 12px;
   }
   .menu-icon.facebook {
     margin-left: 0px;
@@ -1931,6 +1978,7 @@ body {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    height: 100%;
   }
   .menu-items__subnames {
     display: block;
@@ -1954,6 +2002,8 @@ body {
     right: 0;
     width: 100%;
     padding-top: 40px;
+    display: flex;
+    flex-flow: column nowrap;
   }
   .subname-control {
     display: -webkit-box;
@@ -1963,6 +2013,7 @@ body {
     margin-bottom: 12px;
     padding-right: 16px;
     padding-bottom: 0px;
+    padding-left: 14px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -1977,6 +2028,7 @@ body {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    flex: 1;
   }
   .control-name {
     padding-top: 24px;
@@ -1985,14 +2037,14 @@ body {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    text-align: right;
+    padding-left: 16px;
   }
   .back-block {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 40%;
+    width: 40px;
     height: 53px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2010,7 +2062,7 @@ body {
   }
   .back-icon {
     position: relative;
-    width: 54px;
+    width: 40px;
     height: 100%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 auto;
@@ -2023,11 +2075,17 @@ body {
     background-attachment: scroll;
   }
   .subname-items__list {
-    width: 50%;
+    width: 100%;
     margin-bottom: auto;
     padding-left: 0px;
     background-color: #d3d2f6;
     list-style-type: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    text-align: center;
   }
   .subname-items__list.award-projects {
     background-color: #caf4f2;
@@ -2624,9 +2682,6 @@ body {
   .back-icon {
     background-size: contain;
   }
-  .subname-items__list {
-    width: 80%;
-  }
   .memories {
     margin-bottom: 79px;
     padding-top: 0px;
@@ -3016,10 +3071,6 @@ body {
   height: 100%;
   padding: 0px;
   border-radius: 8px;
-  background-color: #fcfcfa;
-  background-image: -webkit-gradient(linear, left top, right top, from(hsla(0, 0%, 98.8%, 0.1)), to(#fff));
-  background-image: linear-gradient(90deg, hsla(0, 0%, 98.8%, 0.1), #fff);
-  box-shadow: 0 3px 2.21381px 0 hsla(0, 0%, 76.1%, 0.02), 0 7px 5.32008px 0 hsla(0, 0%, 76.1%, 0.03), 0 13px 10.0172px 0 hsla(0, 0%, 76.1%, 0.04), 0 22px 17.869px 0 hsla(0, 0%, 76.1%, 0.04), 0 42px 33.4221px 0 hsla(0, 0%, 76.1%, 0.05), 0 100px 80px 0 hsla(0, 0%, 76.1%, 0.07);
   color: #333;
   text-decoration: none;
   transform: translate3d(0, 60%, 0);
@@ -3421,33 +3472,6 @@ body {
     margin-top: 12px;
     padding-bottom: 24px;
   }
-}
-
-
-.loading-container {
-  height: 100vh;
-  width: 100vw;
-}
-
-.loading-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(3, 3, 3);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
-.loading-container__icon {
-  height: 100px;
-  width: 100px;
-  background-image: url('../assets/images/gong-icon.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .header-logo {

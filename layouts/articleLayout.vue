@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import MenuComponent from '~/components/menu'
+  import MenuComponent from '~/modules/common/menu'
   import FooterComponent from '~/components/footer'
   import { mapState } from 'vuex'
 

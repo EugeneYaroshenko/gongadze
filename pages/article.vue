@@ -10,13 +10,31 @@
             <div class="article-name">
               <div class="text-bold-40">{{ post.title }}</div>
             </div>
+            <div class="share-icons">
+              <a :href="facebookSharePath" class="menu-icon facebook"></a>
+              <a :href="twitterSharePath" class="menu-icon twitter"></a>
+              <a :href="telegramSharePath" class="menu-icon telegram"></a>
+              <a :href="mailSharePath" class="menu-icon mail"></a>
+            </div>
             <div class="article-date">
               <div class="text-regular-12"> Опубліковано <span class="date__calendar">{{ post.date }}</span></div>
             </div>
           </div>
-          <div class="article__photo" :style="{ backgroundImage: `url('${post.post_image}')` }"/>
+          <div class="article__photo-container">
+            <div class="article__photo" :style="{ backgroundImage: `url('${post.post_image}')` }"/>
+            <div class="image-comment"><div class="text-bold-15">{{ post.image_comment }}</div></div>
+          </div>
           <div class="article__text">
             <div class="text-regular-20" v-html="post.content"/>
+          </div>
+          <div class="share-container">
+            <div class="text-bold-20">Поділитися матеріалом</div>
+          </div>
+          <div class="share-icons">
+            <a :href="facebookSharePath" class="menu-icon facebook"></a>
+            <a :href="twitterSharePath" class="menu-icon twitter"></a>
+            <a :href="telegramSharePath" class="menu-icon telegram"></a>
+            <a :href="mailSharePath" class="menu-icon mail"></a>
           </div>
           <recommended-articles
             :recommended-posts="recommendedPosts"
@@ -99,6 +117,18 @@
                     postsByCategory: state => state.data.postsByCategory,
                     allCategories: state => state.categories.categories,
                   }),
+      facebookSharePath() {
+        return `https://www.facebook.com/sharer/sharer.php?u=#${process.env.baseUrl}/${this.$route.fullPath}`
+      },
+      telegramSharePath() {
+        return `https://telegram.me/share/url?url=${process.env.baseUrl}/${this.$route.fullPath}&text=${this.post.title}`
+      },
+      twitterSharePath() {
+        return `http://twitter.com/share?text=${this.post.title}&url=${process.env.baseUrl}/${this.$route.fullPath}`
+      },
+      mailSharePath() {
+        return `mailto:?subject=${this.post.title}&body=${process.env.baseUrl}/${this.$route.fullPath}`
+      },
       post() {
         const post = this.postsByCategory[this.category.id].filter(post => this.$route.query.title.includes(post.slug))[0]
 
@@ -154,6 +184,29 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  .share-container {
+    margin-top: 54px;
+    text-align: center;
+  }
+  .share-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0 28px;
+
+    .menu-icon {
+      margin: 0 12px 0 12px;
+      cursor: pointer;
+      opacity: .8;
+      height: 18px;
+      width: 18px;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

@@ -39,6 +39,14 @@
         required: false
       }
     },
+    head () {
+      return {
+        title: this.projectCategory.name,
+        meta: [
+          { hid: 'description', name: 'description', content: this.projectCategory.description }
+        ]
+      }
+    },
     methods: {
       redirectTo(postSlug) {
         return this.$router.push(`/article/?cat_id=${this.projectCategory.id}&title=${postSlug}`)

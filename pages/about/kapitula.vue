@@ -260,6 +260,14 @@
 <script>
   export default {
     layout: 'default',
+    head () {
+      return {
+        title: 'Премія Георгія Ґонґадзе',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Капітула Премії' }
+        ]
+      }
+    },
     data() {
       return {
         currentKapitula: 2020

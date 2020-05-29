@@ -1,9 +1,8 @@
 <template>
   <div class="container">
     <div class="error-main">
-      <h2 v-if="error.statusCode === 404">{{ error.message }}</h2>
-      <h2 v-else>Сталася якась халепа!</h2>
-      <nuxt-link to="/home">На головну</nuxt-link>
+      <h3 v-if="error.statusCode === 404">Сторінка недоступна. Перезавантажте, будь ласка, сторінку, або перевірте правильність посилання</h3>
+      <nuxt-link to="/" class="link-home">На головну</nuxt-link>
     </div>
   </div>
 </template>
@@ -31,8 +30,21 @@
     z-index: 1000;
   }
 
+  .link-home {
+    display: block;
+    width: 200px;
+    border: 1px solid #000;
+    margin: 32px auto 0;
+    padding: 16px 24px;
+    text-decoration: none;
+
+  }
+
   .error-main {
-    padding-top: 100px;
+    padding-top: 160px;
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 800px;
   }
 </style>

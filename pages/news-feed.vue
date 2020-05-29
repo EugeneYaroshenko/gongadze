@@ -21,6 +21,14 @@
 
   export default {
     layout: 'default',
+    head () {
+      return {
+        title: 'Премія Георгія Ґонґадзе',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Новини' }
+        ]
+      }
+    },
     computed: {
       ...mapState({
                     postsByCategory: state => state.data.postsByCategory,

@@ -138,10 +138,10 @@
     display: -ms-flexbox;
     display: flex;
     padding: 16px;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -150,8 +150,7 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    text-align: left;
-    color: #7D7D7C;
+    text-align: center;
   }
 
   .article-name__title {

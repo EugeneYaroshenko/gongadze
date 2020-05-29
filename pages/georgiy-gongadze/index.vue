@@ -182,6 +182,14 @@
 
   export default {
     layout: 'default',
+    head () {
+      return {
+        title: 'Премія Георгія Ґонґадзе',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Біографія' }
+        ]
+      }
+    },
     mounted () {
       for (let i = 1; i <= 15; i++) {
         const t = new TimelineMax()

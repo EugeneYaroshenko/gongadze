@@ -157,7 +157,7 @@
 
   .art {
     background-image: url('../assets/images/image-cover.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center bottom;
     height: 100%;
     width: 100%;
@@ -188,6 +188,10 @@
       display: block;
       background: transparent;
       box-shadow: none;
+    }
+
+    .art {
+      background-size: contain;
     }
 
     .grid__articles {

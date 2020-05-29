@@ -159,7 +159,15 @@
 
 <script>
   export default {
-    layout: 'default'
+    layout: 'default',
+    head () {
+      return {
+        title: 'Премія Георгія Ґонґадзе',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Меценати Премії' }
+        ]
+      }
+    },
   }
 </script>
 

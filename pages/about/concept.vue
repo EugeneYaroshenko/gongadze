@@ -37,6 +37,14 @@
 
   export default {
     layout: 'default',
+    head () {
+      return {
+        title: 'Премія Георгія Ґонґадзе',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Концепція Премії' }
+        ]
+      }
+    },
     components: {
       QuestionComponent
     }

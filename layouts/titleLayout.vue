@@ -1,7 +1,9 @@
 <template>
   <div>
     <div v-if="postsFetched && categoriesFetched">
-      <menu-component />
+      <div ref="menuToggle" class="menu-toggle__container">
+        <menu-component />
+      </div>
       <nuxt />
       <footer-component />
     </div>
@@ -16,9 +18,10 @@
 </template>
 
 <script>
-  import MenuComponent from '~/components/menu'
+  import MenuComponent from '~/modules/common/menu'
   import FooterComponent from '~/components/footer'
   import { mapState } from 'vuex'
+
 
   export default {
     scrollToTop: true,
@@ -42,30 +45,4 @@
   }
 </script>
 <style lang="scss">
-  .loading-container {
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .loading-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(3, 3, 3);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-
-  .loading-container__icon {
-    height: 100px;
-    width: 100px;
-    background-image: url('../assets/images/gong-icon.svg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
 </style>

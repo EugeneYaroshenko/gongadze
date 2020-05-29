@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import commonModules from './modules/common'
+import commonModules from './modules/app'
 
 Vue.use(Vuex)
 
