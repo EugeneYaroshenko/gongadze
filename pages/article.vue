@@ -118,16 +118,16 @@
                     allCategories: state => state.categories.categories,
                   }),
       facebookSharePath() {
-        return `https://www.facebook.com/sharer/sharer.php?u=#${encodeURIComponent(process.env.baseUrl + '/' + this.$route.fullPath)}`
+        return `https://www.facebook.com/sharer/sharer.php?u=#${encodeURIComponent(process.env.baseUrl + this.$route.fullPath)}`
       },
       telegramSharePath() {
-        return `https://telegram.me/share/url?url=${encodeURIComponent(process.env.baseUrl + '/' + this.$route.fullPath)}`
+        return `https://telegram.me/share/url?url=${encodeURIComponent(process.env.baseUrl + this.$route.fullPath)}`
       },
       twitterSharePath() {
-        return `http://twitter.com/share?url=${encodeURIComponent(process.env.baseUrl + '/' + this.$route.fullPath)}`
+        return `http://twitter.com/share?url=${encodeURIComponent(process.env.baseUrl + this.$route.fullPath)}`
       },
       mailSharePath() {
-        return `mailto:?subject=${this.post.title}&body=${encodeURIComponent(process.env.baseUrl + '/' + this.$route.fullPath)}`
+        return `mailto:?subject=${this.post.title}&body=${encodeURIComponent(process.env.baseUrl + this.$route.fullPath)}`
       },
       post() {
         const post = this.postsByCategory[this.category.id].filter(post => this.$route.query.title.includes(post.slug))[0]
