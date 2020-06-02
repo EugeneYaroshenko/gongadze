@@ -30,6 +30,7 @@ export const menuStructure = {
     subcategories: [
       { name: 'Біографія', slug: '/georgiy-gongadze' },
       { name: 'Cпогади', slug: '/georgiy-gongadze/memories' },
+      { name: 'Cпільний проєкт з Reporters', slug: '/', link: 'http://gongadze.reporters.media/' },
     ]
   }
 }

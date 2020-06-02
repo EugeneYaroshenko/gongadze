@@ -13,12 +13,12 @@
     <ul role="list" class="footer-list">
       <li class="footer-list__item">
         <nuxt-link to="/news-feed" class="footer-link__container">
-          <div class="text-regular-14">Новини</div>
+          <div class="text-regular-16">Новини</div>
         </nuxt-link>
       </li>
       <li class="footer-list__item">
         <div class="footer-link__container">
-          <div class="text-regular-14">Проєкти Премії</div>
+          <div class="text-regular-16">Проєкти Премії</div>
         </div>
         <ul role="list" class="footer-item__list">
           <li class="footer-sublink-item">
@@ -40,12 +40,12 @@
       </li>
       <li class="footer-list__item">
         <nuxt-link to="/publications" class="footer-link__container">
-          <div class="text-regular-14">Публікації</div>
+          <div class="text-regular-16">Публікації</div>
         </nuxt-link>
       </li>
       <li class="footer-list__item">
         <div class="footer-link__container">
-          <div class="text-regular-14">Про Премію</div>
+          <div class="text-regular-16">Про Премію</div>
         </div>
         <ul role="list" class="footer-item__list">
           <li class="footer-sublink-item">
@@ -82,7 +82,7 @@
       </li>
       <li class="footer-list__item">
         <div class="footer-link__container">
-          <div class="text-regular-14">Георгій Ґонґадзе</div>
+          <div class="text-regular-16">Георгій Ґонґадзе</div>
         </div>
         <ul role="list" class="footer-item__list">
           <li class="footer-sublink-item">
@@ -94,6 +94,11 @@
             <nuxt-link to="/georgiy-gongadze/memories" class="footer-sublink w-inline-block">
               <div class="text-regular-12">Спогади</div>
             </nuxt-link>
+          </li>
+          <li class="footer-sublink-item">
+            <a target="http://gongadze.reporters.media/" class="footer-sublink w-inline-block">
+              <div class="text-regular-12">Спецпроєкт з Reporters</div>
+            </a>
           </li>
         </ul>
       </li>
@@ -145,6 +150,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex-flow: row wrap;
     width: 100%;
     margin-bottom: 0px;
     padding-left: 0px;
@@ -175,6 +181,7 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    min-width: 100px;
   }
 
   .footer-list__item:hover {
@@ -250,7 +257,7 @@
 
   .footer-item__list {
     margin-top: 12px;
-    padding-left: 8px;
+    padding-left: 0;
     list-style-type: none;
   }
 
@@ -273,6 +280,10 @@
     margin-bottom: 8px;
   }
 
+  .footer-link__container {
+    font-weight: 600;
+  }
+
   a.footer-link__container:hover {
     text-decoration: underline;
   }
@@ -280,19 +291,6 @@
   @media screen and (max-width: 991px) {
     .footer-list {
       padding-left: 32px;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: start;
-      -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
     }
 
     .footer-icons {

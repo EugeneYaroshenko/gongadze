@@ -18,7 +18,10 @@
           <div class="menu_extended__floating georgiy-gongadze">
             <ul role="list" class="menu-subitems">
               <li class="menu-subitem" v-for="(item, index) in menuStructure['gongadze'].subcategories" :key="index">
-                <nuxt-link :to="item.slug" class="subitem-link w-inline-block" @click.native="hideMenu">
+                <a :href="item.link" target="_blank" class="subitem-link w-inline-block" @click.native="hideMenu" v-if="item.link">
+                  <div class="text-regular-20">{{ item.name }}</div>
+                </a>
+                <nuxt-link :to="item.slug" class="subitem-link w-inline-block" @click.native="hideMenu" v-else>
                   <div class="text-regular-20">{{ item.name }}</div>
                 </nuxt-link>
               </li>
@@ -205,10 +208,14 @@
               <div class="subname-items">
                 <ul role="list" class="subname-items__list georgiy-gongadze">
                   <li class="subname-item" v-for="(item, index) in menuStructure['gongadze'].subcategories" :key="index">
-                    <nuxt-link :to="item.slug" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                    <a :href="item.link" target="_blank" class="subname-item__link w-inline-block" @click.native="hideMenu" v-if="item.link">
+                      <div class="text-regular-20">{{ item.name }}</div>
+                    </a>
+                    <nuxt-link :to="item.slug" class="subname-item__link w-inline-block" @click.native="hideMenu" v-else>
                       <div class="text-regular-20">{{ item.name }}</div>
                     </nuxt-link>
                   </li>
+
                 </ul>
               </div>
             </div>
@@ -287,11 +294,10 @@
         this.menuShown = !this.menuShown
       },
       hideMenu () {
+        this.backMobileMenu()
         this.menuShown = false
         this.mobileMenuItemsShown = true
         this.extendedMenuShown = false
-        this.hideExtendedMenu()
-        this.backMobileMenu()
       },
       showExtendedMenu(element) {
         this.extendedMenuShown = true
@@ -329,7 +335,7 @@
         }
       },
       hideExtendedMenu() {
-        if (this.activeElement) {
+        if (this.activeElement && this.$refs[this.activeElement].style) {
           this.$refs[this.activeElement].style.opacity = 0
           this.$refs[this.activeElement].style.visibility = 'hidden'
         }

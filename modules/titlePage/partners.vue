@@ -1,35 +1,40 @@
 <template>
   <div class="partners-container">
     <h1 class="headline-h4 first-page-headline">Партнери</h1>
-    <div class="partners">
-      <div class="partners-block">
-        <div class="w-layout-grid partners-grid">
-          <a href="https://pen.org.ua" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon pen-ukraine"></div>
-          </a>
-          <a href="https://www.pravda.com.ua" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon ukrainska-pravda"></div>
-          </a>
-          <a href="https://www.facebook.com/kmbsalumni/" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon kmbs-alumni"></div>
-          </a>
-        </div>
-      </div>
-      <div class="partner-subheading">
-        <div class="text-semibold-20">Генеральний медіапартнер</div>
-      </div>
-      <div class="partners-block">
-        <div class="partner">
-          <a href="https://culture.suspilne.media" target="_blank" class="partner-icon__container w-inline-block">
-            <div class="partner-icon ua-kultura"></div>
-          </a>
-        </div>
-      </div>
-    </div>
     <div class="partners-multicolumn">
       <div class="partners-column">
+        <div class="partners-block">
+          <div class="partner-subheading">
+            <div class="text-semibold-16">Засновники</div>
+          </div>
+          <div class="w-layout-grid partners-grid founders-grid">
+            <a href="https://pen.org.ua" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon pen-ukraine"></div>
+            </a>
+            <a href="https://www.pravda.com.ua" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon ukrainska-pravda"></div>
+            </a>
+            <a href="https://www.facebook.com/kmbsalumni/" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon kmbs-alumni"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="partners-column">
+        <div class="partners-block">
+          <div class="partner-subheading">
+            <div class="text-semibold-16">Генеральний медіапартнер</div>
+          </div>
+          <div class="partner">
+            <a href="https://culture.suspilne.media" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon ua-kultura"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="partners-column extra-column">
         <div class="partner-subheading">
-          <div class="text-semibold-20">Інформаційні партнери</div>
+          <div class="text-semibold-16">Інформаційні партнери</div>
         </div>
         <div class="partners-block">
           <div class="w-layout-grid partners-grid">
@@ -65,7 +70,7 @@
       </div>
       <div class="partners-column">
         <div class="partner-subheading">
-          <div class="text-semibold-20"> Організаційні партнери</div>
+          <div class="text-semibold-16"> Організаційні партнери</div>
         </div>
         <div class="partners-block">
           <div class="w-layout-grid partners-grid organizational-partners-grid">
@@ -102,12 +107,17 @@
     grid-template-rows: auto;
   }
 
+  .founders-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .partners-grid.organizational-partners-grid {
     max-width: 600px;
     margin-right: auto;
     margin-left: auto;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .partner-icon__container {
@@ -119,7 +129,7 @@
 
   .partner-subheading {
     margin-top: 40px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     text-align: center;
   }
 
@@ -231,12 +241,11 @@
 
   .partners-container {
     margin-top: 54px;
-    padding: 80px 62px 40px;
-    background-color: #f1f8ff;
+    padding: 40px 16px 8px;
   }
 
   .partners {
-    width: 600px;
+    width: 800px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -257,6 +266,10 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+
+    &.extra-column {
+      flex: 2;
+    }
   }
 
   @media screen and (max-width: 991px) {

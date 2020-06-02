@@ -162,9 +162,12 @@
     flex-flow: column nowrap;
   }
 
+  figure {
+    margin: 0;
+  }
+
   .wp-block-image {
     margin: 40px auto 24px;
-    max-width: 600px;
 
     img {
       max-width: 100%;
