@@ -20,24 +20,15 @@
           </div>
         </div>
       </div>
-      <div class="partners-column">
-        <div class="partners-block">
-          <div class="partner-subheading">
-            <div class="text-semibold-16">Генеральний медіапартнер</div>
-          </div>
-          <div class="partner">
-            <a href="https://culture.suspilne.media" target="_blank" class="partner-icon__container w-inline-block">
-              <div class="partner-icon ua-kultura"></div>
-            </a>
-          </div>
-        </div>
-      </div>
       <div class="partners-column extra-column">
         <div class="partner-subheading">
           <div class="text-semibold-16">Інформаційні партнери</div>
         </div>
         <div class="partners-block">
           <div class="w-layout-grid partners-grid">
+            <a href="https://culture.suspilne.media" target="_blank" class="partner-icon__container w-inline-block">
+              <div class="partner-icon ua-kultura"></div>
+            </a>
             <a id="w-node-d1d144c1321a-af057138" href="https://www.radiosvoboda.org" target="_blank" class="partner-icon__container w-inline-block">
               <div class="partner-icon radio-svoboda"></div>
             </a>
@@ -266,6 +257,7 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    width: 100%;
 
     &.extra-column {
       flex: 2;
@@ -293,8 +285,8 @@
     }
     .partners-grid.organizational-partners-grid {
       max-width: 400px;
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     .partners-container {
       padding-right: 12px;
@@ -307,8 +299,8 @@
 
   @media screen and (max-width: 479px) {
     .partners-grid {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     .partners-multicolumn {
       -webkit-box-orient: vertical;

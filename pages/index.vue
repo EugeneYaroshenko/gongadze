@@ -151,14 +151,13 @@
 
 <style lang="scss" scoped>
   .column-art {
-    padding: 12px 8px 0;
-    background: #fcfcfa;
+    padding: 70px 32px 32px;
   }
 
   .art {
-    background-image: url('../assets/images/image-cover.png');
-    background-size: cover;
-    background-position: center bottom;
+    background-image: url('../assets/images/logo.svg');
+    background-size: contain;
+    background-position: center top;
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -185,9 +184,16 @@
       height: 800px;
       width: 100%;
       max-width: 380px;
-      display: block;
       background: transparent;
       box-shadow: none;
+      display: none;
+    }
+
+    .title-screen__cover {
+      background-image: url('../assets/images/logo-background.svg');
+      background-size: cover;
+      background-position: left top;
+      padding: 16px 12px 0;
     }
 
     .art {
