@@ -60,9 +60,6 @@
             <div class="text-semibold-16">EN</div>
           </div>
         </div>
-        <div class="menu-icons" >
-          <a href="https://facebook.com/gongadzeprize/" target="_blank" class="menu-icon facebook"></a>
-        </div>
         <div class="menu-items__container menu-items--desktop">
           <div class="menu-item" @mouseenter="hideExtendedMenu">
             <nuxt-link
@@ -230,8 +227,8 @@
               </div>
               <div class="subname-items">
                 <ul role="list" class="subname-items__list award-projects">
-                  <li class="subname-item" v-for="(item, index) in projectsSubCateogries" :key="index">
-                    <nuxt-link :to="item.slug" class="subname-item__link w-inline-block" @click.native="hideMenu">
+                  <li class="subname-item" v-for="(item, index) in projectsSubCateogries" :key="item.name">
+                    <nuxt-link :to="`/projects/${item.slug}`" class="subname-item__link w-inline-block" @click.native="hideMenu">
                       <div class="text-regular-20">{{ item.name }}</div>
                     </nuxt-link>
                   </li>
@@ -249,15 +246,44 @@
               </div>
               <div class="subname-items">
                 <ul role="list" class="subname-items__list">
-                  <li class="subname-item" v-for="(item, index) in menuStructure['gongadze'].subcategories" :key="index">
-                    <nuxt-link :to="item.slug" class="subname-item__link w-inline-block" @click.native="hideMenu">
-                      <div class="text-regular-20">{{ item.name }}</div>
+                  <li class="subname-item" @click="hideMenu">
+                    <nuxt-link to="/about" class="subname-item__link w-inline-block">
+                      <div class="text-regular-20">Засновники</div>
+                    </nuxt-link>
+                  </li>
+                  <li class="subname-item" @click="hideMenu">
+                    <nuxt-link to="/about/concept" class="subname-item__link w-inline-block">
+                      <div class="text-regular-20">Концепція премії</div>
+                    </nuxt-link>
+                  </li>
+                  <li class="subname-item" @click="hideMenu">
+                    <nuxt-link to="/about/kapitula" class="subname-item__link w-inline-block" >
+                      <div class="text-regular-20">Капітула премії</div>
+                    </nuxt-link>
+                  </li>
+                  <li class="subname-item" @click="hideMenu">
+                    <nuxt-link to="/about/laureates" class="subname-item__link w-inline-block">
+                      <div class="text-regular-20">Лауреати Премії</div>
+                    </nuxt-link>
+                  </li>
+                  <li class="subname-item" @click="hideMenu">
+                    <nuxt-link to="/about/maecenas" class="subname-item__link w-inline-block">
+                      <div class="text-regular-20">Меценати Премії</div>
+                    </nuxt-link>
+                  </li>
+                  <li class="subname-item" @click="hideMenu">
+                    <nuxt-link to="/about/team" class="subname-item__link w-inline-block">
+                      <div class="text-regular-20">Команда Премії</div>
                     </nuxt-link>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+        </div>
+        <div class="menu-icons" >
+          <a href="https://facebook.com/gongadzeprize/" target="_blank" class="menu-icon facebook"></a>
+          <a href="mailto:gongadzeprize@gmail.com" target="_blank" class="menu-icon mail"></a>
         </div>
       </div>
     </div>
@@ -328,7 +354,7 @@
       },
       backMobileMenu() {
         this.mobileMenuItemsShown = true
-        if (this.activeSubElement) {
+        if (this.activeSubElement && this.$refs[this.activeSubElement]) {
           this.$refs[this.activeSubElement].style.opacity = 0
           this.$refs[this.activeSubElement].style.visibility = 'hidden'
           this.$refs[this.activeSubElement].style.transform = 'translate3d(40%, 0, 0)'
@@ -361,7 +387,7 @@
     padding: 10px;
     cursor: pointer;
     z-index: 1100;
-    background: #3da4ab;
+    background: #544ED9;
     border-radius: 24px;
     transition: all 200ms ease-in;
     box-shadow: none;
@@ -369,7 +395,7 @@
 
     &:hover {
       transform: scale(1.3);
-      background: darken(#3da4ab, 20%)
+      background: darken(#544ED9, 20%)
     }
 
     .menu-toggle-icon {

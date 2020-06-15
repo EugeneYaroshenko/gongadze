@@ -115,7 +115,7 @@
 <style lang="scss" scoped>
   a {
     text-decoration: none;
-    color: #333333;
+    color: inherit;
   }
 
   .footer {
@@ -124,7 +124,7 @@
     display: -ms-flexbox;
     display: flex;
     margin-top: 64px;
-    padding: 18px 24px 64px;
+    padding: 32px 24px 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -134,12 +134,14 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    background: #303030;
+    color: #FCFCFA;
   }
 
   .footer-logo {
     width: 80px;
     height: 100px;
-    background-image: url('../assets/images/footer-icon.svg');
+    background-image: url('../assets/images/logo-white.svg');
     background-position: 0px 0px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -263,12 +265,13 @@
 
   .footer-sublink {
     width: 100%;
-    color: #333;
     text-decoration: none;
+    color: #E3E3E1;
   }
 
   .footer-sublink:hover {
     text-decoration: underline;
+    color: #FCFCFA;
   }
 
   .text-regular-12 {

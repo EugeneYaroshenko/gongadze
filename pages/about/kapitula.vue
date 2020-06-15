@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div ref="kapitula-2020" class="w-layout-grid sklad-container" :class="{'sklad-container--shown': currentKapitula === 2020 }">
+        <div ref="kapitula-2020" class="w-layout-grid kapitula-grid sklad-container" :class="{'sklad-container--shown': currentKapitula === 2020 }">
           <div id="w-node-53c5f4f00f64-6f0eff8c" class="kapitula-member">
             <div class="kapitula-member__photo gongadze"></div>
             <div class="kapitula-member__about">
@@ -141,7 +141,7 @@
             </div>
           </div>
         </div>
-        <div ref="kapitula-2019" class="w-layout-grid sklad-container" :class="{'sklad-container--shown': currentKapitula === 2019 }">
+        <div ref="kapitula-2019" class="w-layout-grid kapitula-grid sklad-container" :class="{'sklad-container--shown': currentKapitula === 2019 }">
           <div id="w-node-56a79826ed3c-6f0eff8c" class="kapitula-member">
             <div class="kapitula-member__photo gongadze"></div>
             <div class="kapitula-member__about">
