@@ -1,12 +1,23 @@
 <template>
   <div>
-    <div class="gongadze-content">
-      <div v-if="publicationCategory" class="project-container">
-        <h4 class="headline-h4 headline-with-subtext">Публікації</h4>
-        <div class="gongadze-content--condensed">
-          <div class="projects-decription">
-            <div class="text-regular-20">{{ publicationCategory.description }}</div>
+    <div class="gongadze-content big-preview">
+      <div v-if="publicationCategory">
+        <div class="project-preview publications-preview">
+          <div class="project-preview__overlay"/>
+          <div class="project-preview__description">
+            <div class="description__name">
+              <h1 class="headline-h1">Публікації</h1>
+            </div>
+            <div class="description__about">
+              <div class="text-regular-20">{{ publicationCategory.description }}</div>
+            </div>
           </div>
+          <div class="navdown-container" v-scroll-to="'#materials'">
+            <div class="arrow-down arrow-down__first"></div>
+            <div class="arrow-down arrow-down__second"></div>
+          </div>
+        </div>
+        <div id="materials" class="gongadze-content--condensed project-container">
           <div class="w-layout-grid publications-grid" v-if="publicationCategory && publicationPosts">
             <div v-for="(post, index) in publicationPosts" :key="index">
               <project :post="post" :redirect-to="redirectTo" :color="postColor"/>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="gongadze-content">
-      <div class="gongadze-content--condensed project-container">
+      <div class="gongadze-content--condensed news-container">
         <div class="w-layout-grid news-grid" v-if="newsPosts">
           <main-news :post="newsPosts[0]" :redirect-to="redirectTo" :color="postColor" />
           <div v-for="(post, index) in newsPosts.slice(1)" :key="index">
@@ -61,4 +61,7 @@
 </script>
 
 <style lang="scss" scoped>
+  .news-container {
+    padding: 120px 24px 32px;
+  }
 </style>

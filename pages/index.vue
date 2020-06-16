@@ -3,10 +3,12 @@
     <div class="gongadze-content first-page">
       <div class="first-screen">
         <div class="div-block">
-          <div data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-w-id="2b659ddf-6b28-0725-0093-49a016635f46" data-wf-id="[&quot;2b659ddf-6b28-0725-0093-49a016635f46&quot;]" class="background-video-2 w-background-video w-background-video-atom"><video autoplay="autoplay" loop="loop" data-wf-ignore=""><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.webm" data-wf-ignore=""><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.mp4" data-wf-ignore=""></video></div>
+          <div data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video-2 w-background-video w-background-video-atom"><video autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.mp4" data-wf-ignore="true"><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.webm" data-wf-ignore="true"></video></div>
         </div>
         <div class="first-screen__text">
-          <div class="text-regular-16">Премія покликана формувати моральні орієнтири в журналістиці та сприяти пошуку інноваційних рішень донесення правди</div>
+          <div class="text-regular-16">Премія покликана формувати моральні орієнтири в журналістиці та сприяти пошуку
+            інноваційних рішень донесення правди
+          </div>
         </div>
         <div class="navdown-container" v-scroll-to="'#materials'">
           <div class="arrow-down arrow-down__first"></div>
@@ -18,7 +20,7 @@
           <nuxt-link to="/news-feed" class="content-headline-link">
             <h2 class="content-heading">Новини</h2>
           </nuxt-link>
-          <div class="w-layout-grid content-items__grid" >
+          <div class="w-layout-grid content-items__grid">
             <material
               v-for="(post, index) in newsMaterials"
               :redirect-to="redirectTo"
@@ -26,7 +28,9 @@
               :key="index"
             />
           </div>
-          <div class="link-container"><nuxt-link to="/news-feed" class="first-screen__link">Читати всі новини</nuxt-link></div>
+          <div class="link-container">
+            <nuxt-link to="/news-feed" class="first-screen__link">Читати всі новини</nuxt-link>
+          </div>
         </div>
         <div class="separator-container"></div>
         <div v-if="publicationsMaterials">
@@ -46,7 +50,9 @@
               :key="index"
             />
           </div>
-          <div class="link-container"><nuxt-link to="/publications" class="first-screen__link">Читати всі публікації</nuxt-link></div>
+          <div class="link-container">
+            <nuxt-link to="/publications" class="first-screen__link">Читати всі публікації</nuxt-link>
+          </div>
         </div>
         <div class="separator-container"></div>
         <div>
@@ -110,20 +116,35 @@
             <h3 class="gongadze-heading">Спогади</h3>
           </nuxt-link>
         </div>
-        <div data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom"><video autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4" data-wf-ignore="true"><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm" data-wf-ignore="true"></video></div>
+        <div
+          data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg"
+          data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"
+          data-autoplay="true" data-loop="true" data-wf-ignore="true"
+          class="background-video w-background-video w-background-video-atom">
+          <video autoplay="" loop=""
+                 style="background-image:url(&quot;https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg&quot;)"
+                 muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+            <source
+              src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4"
+              data-wf-ignore="true">
+            <source
+              src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"
+              data-wf-ignore="true">
+          </video>
+        </div>
       </div>
       <!--<div class="title-screen__materials" id="other-materials" v-if="otherMaterials">-->
-        <!--<div class="w-layout-grid grid__articles">-->
-          <!--<material-->
-            <!--v-for="(post, index) in otherMaterials"-->
-            <!--:redirect-to="redirectTo"-->
-            <!--:post="post"-->
-            <!--:key="index"-->
-          <!--/>-->
-        <!--</div>-->
+      <!--<div class="w-layout-grid grid__articles">-->
+      <!--<material-->
+      <!--v-for="(post, index) in otherMaterials"-->
+      <!--:redirect-to="redirectTo"-->
+      <!--:post="post"-->
+      <!--:key="index"-->
+      <!--/>-->
+      <!--</div>-->
       <!--</div>-->
     </div>
-    <partners />
+    <partners/>
   </div>
 </template>
 
@@ -134,7 +155,7 @@
   import TimelineMax from 'gsap/umd/TimelineMax'
   import TweenMax from 'gsap/umd/TweenMax'
   import EasePack from 'gsap/umd/EasePack'
-  import { mapState } from 'vuex'
+  import {mapState} from 'vuex'
 
   export default {
     layout: 'titleLayout',
@@ -189,7 +210,7 @@
                     postsByCategory: state => state.data.postsByCategory,
                     allCategories: state => state.categories.categories
                   }),
-      newsMaterials () {
+      newsMaterials() {
         const newsCategory = this.allCategories.filter(category => category.slug === 'news-feed')[0]
         const newsMaterials = this.postsByCategory[newsCategory.id]
 
@@ -199,7 +220,7 @@
           return null
         }
       },
-      publicationsMaterials () {
+      publicationsMaterials() {
         const publicationCategory = this.allCategories.filter(category => category.slug === 'publications')[0]
         const publicationMaterials = this.postsByCategory[publicationCategory.id]
 
@@ -209,12 +230,12 @@
           return null
         }
       },
-      firstPageMaterials () {
+      firstPageMaterials() {
         if (this.firstPageCategory) {
           return this.postsByCategory[this.firstPageCategory.id]
         }
       },
-      firstPageCategory () {
+      firstPageCategory() {
         return this.allCategories.filter(category => category.slug === 'first-page')[0]
       }
     },
@@ -240,6 +261,7 @@
     width: 100%;
     max-height: 100%;
   }
+
   .column-art {
     padding: 70px 32px 32px;
   }

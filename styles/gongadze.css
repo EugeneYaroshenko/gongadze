@@ -980,7 +980,7 @@ body {
 .headline-h1 {
   margin-bottom: 40px;
   font-family: DRUK, sans-serif;
-  font-size: 40px;
+  font-size: 2.4em;
   line-height: 1.66em;
 }
 
@@ -1602,19 +1602,13 @@ body {
   width: 100%;
   height: 100%;
   min-height: 150px;
-  padding: 32px 24px 27px 20px;
-  background: #E7E6FC;
+  padding: 12px 24px 24px 0;
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
 }
 
-.publication-container:hover .publication-info {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 98.8%, 0.79)), to(#fff)) !important;
-  background-image: linear-gradient(180deg, hsla(0, 0%, 98.8%, 0.79), #fff) !important;
-  box-shadow: 0 3px 2.21381px 0 hsla(0, 0%, 76.1%, 0.02), 0 7px 5.32008px 0 hsla(0, 0%, 76.1%, 0.03), 0 13px 10.0172px 0 hsla(0, 0%, 76.1%, 0.04), 0 22px 17.869px 0 hsla(0, 0%, 76.1%, 0.04), 0 42px 33.4221px 0 hsla(0, 0%, 76.1%, 0.05), 0 42px 33.4221px 0 hsla(0, 0%, 76.1%, 0.05), 0 100px 80px 0 hsla(0, 0%, 76.1%, 0.07);
-  -webkit-transform: translate(0px, -30px);
-  -ms-transform: translate(0px, -30px);
-  transform: translate(0px, -30px);
+.publication-container:hover .publication-name {
+  text-decoration: underline;
 }
 
 .publication-description {
@@ -1639,7 +1633,7 @@ body {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  grid-column-gap: 54px;
+  grid-column-gap: 84px;
   grid-row-gap: 54px;
 }
 
@@ -3491,6 +3485,7 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 100;
 }
 
 @media screen and (max-width: 600px) {
@@ -3502,7 +3497,7 @@ body {
 }
 
 .project-container {
-  padding: 120px 0 32px;
+  padding: 80px 24px 32px;
 }
 
 .gongadze-content.first-page {
@@ -4030,6 +4025,10 @@ body {
 }
 
 @media screen and (max-width: 479px) {
+  .headline-h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
   .first-screen {
     padding-right: 24px;
     padding-left: 24px;
@@ -4059,3 +4058,66 @@ body {
     height: 100%;
   }
 }
+
+.big-preview {
+  padding: 0;
+}
+
+.project-preview {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 24px;
+}
+
+.project-preview__overlay {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(84, 78, 217, 0.7);
+}
+
+.project-preview__description {
+  position: relative;
+  z-index: 2;
+  color: #FCFCFA;
+  max-width: 750px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.description__name {
+  text-transform: uppercase;
+}
+
+.description__about {
+  color: #E3E3E1;
+}
+
+.publications-preview {
+  background-image: url("../assets/images/publications-back.jpg");
+}
+
+.journalism-change {
+  background-image: url("../assets/images/project-journalism.jpg");
+}
+
+.stories-social-entrepreneurship {
+  background-image: url("../assets/images/social-pidpriemnitstvo.jpg");
+}
+
+.profession-stay {
+  background-image: url("../assets/images/project-profession.jpg");
+}
+
