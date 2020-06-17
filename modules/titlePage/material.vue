@@ -1,6 +1,8 @@
 <template>
   <div class="content-item" @click="redirectTo(postCategory, post.slug)">
-    <div class="content-item__photo" :style="{ backgroundImage: `url('${post.post_image}')` }"></div>
+    <div class="content-item__photo" :style="{ backgroundImage: `url('${post.post_image}')` }">
+      <div class="content-item__overlay"/>
+    </div>
     <div class="content-item__description">
       <div>
         <div class="text-light-14">{{ post.date }}</div>

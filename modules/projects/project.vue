@@ -1,6 +1,8 @@
 <template>
   <div @click="redirectTo(post.slug)" class="publication-container w-inline-block">
-    <div class="publication-image journalism-change" :style="{ backgroundImage: `url('${post.post_image}')` }"></div>
+    <div class="publication-image journalism-change" :style="{ backgroundImage: `url('${post.post_image}')` }">
+      <div class="content-item__overlay"/>
+    </div>
     <div class="publication-info__container">
       <div class="publication-info">
         <div class="publication-description">

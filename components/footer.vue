@@ -4,10 +4,9 @@
       <nuxt-link to="/" aria-current="page" class="w-inline-block w--current">
         <div class="footer-logo"></div>
       </nuxt-link>
-      <div class="footer-icons" style="display: none">
-        <div class="footer-icon facebook"></div>
-        <div class="footer-icon instagram"></div>
-        <div class="footer-icon twitter"></div>
+      <div class="footer-icons">
+        <a href="https://facebook.com/gongadzeprize/" target="_blank" class="footer-icon facebook"></a>
+        <a href="mailto:gongadzeprize@gmail.com" target="_blank" class="footer-icon mail"></a>
       </div>
     </div>
     <ul role="list" class="footer-list">
@@ -209,10 +208,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+    filter: invert(1);
   }
 
   .footer-icon.facebook {
-    background-image: url('../assets/images/Group.svg');
+    background-image: url('../assets/images/facebook.svg');
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -232,12 +232,12 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
     padding-top: 16px;
     padding-bottom: 16px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
+    display: none;
   }
 
   .footer-top {
@@ -262,6 +262,14 @@
     padding-left: 0;
     list-style-type: none;
   }
+
+  .footer-icon.mail {
+    background-image: url('../assets/images/mail.svg');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
 
   .footer-sublink {
     width: 100%;
@@ -305,13 +313,22 @@
   }
 
   @media screen and (max-width: 767px) {
+    .footer-list {
+      display: none;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+    }
+
     .footer-logo {
       width: 73.47px;
       height: 95px;
     }
     .footer-icon {
-      width: 16px;
-      height: 16px;
+      width: 24px;
+      height: 24px;
       margin-right: 12px;
     }
   }

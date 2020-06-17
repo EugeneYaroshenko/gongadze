@@ -283,6 +283,7 @@
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
     }
+
     .partners-grid.organizational-partners-grid {
       max-width: 400px;
       -ms-grid-columns: 1fr 1fr;
@@ -302,6 +303,14 @@
       -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
     }
+
+    .founders-grid {
+      grid-column-gap: 24px;
+      grid-row-gap: 28px;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+
     .partners-multicolumn {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;

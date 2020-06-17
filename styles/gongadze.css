@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: #000;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -167,8 +167,8 @@ body {
   justify-items: stretch;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
-  grid-column-gap: 62px;
-  grid-row-gap: 32px;
+  grid-column-gap: 90px;
+  grid-row-gap: 40px;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto auto;
@@ -177,7 +177,7 @@ body {
 
 .maecenas-image {
   width: 100%;
-  height: 300px;
+  height: 350px;
   background-color: #636363;
   background-image: url('../assets/images/чернов.jpg');
   background-position: 50% 50%;
@@ -268,7 +268,9 @@ body {
   padding-top: 16px;
   padding-bottom: 24px;
   padding-left: 0px;
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
 }
 
 .text-bold-18 {
@@ -295,7 +297,6 @@ body {
   font-weight: 400;
   letter-spacing: 0.03em;
   text-decoration: none;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -1035,12 +1036,14 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(94deg, rgba(252, 252, 250, 0.95) 11%, #fcfcfa);
+  pointer-events: none;
 }
 
 .menu--shown {
   transform: translate3d(0, 0, 0);
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .menu-extended {
@@ -1095,8 +1098,8 @@ body {
 
 .menu-item {
   display: block;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   padding-right: 0px;
   padding-left: 12px;
   color: #333;
@@ -1145,6 +1148,7 @@ body {
   display: flex;
   margin-left: 8px;
   margin-top: 12px;
+  padding-bottom: 40px;
 }
 
 .menu-icon {
@@ -1579,6 +1583,10 @@ body {
   cursor: pointer;
 }
 
+.publication-container:hover .content-item__overlay {
+  opacity: 1;
+}
+
 
 .publication-image {
   height: 300px;
@@ -1587,6 +1595,7 @@ body {
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .publication-image.journalism-change {
@@ -1950,6 +1959,7 @@ body {
   .menu-icons {
     padding-left: 12px;
     margin-top: 32px;
+    padding-bottom: 0;
     order: 1;
   }
   .menu-icon.facebook {
@@ -2089,10 +2099,8 @@ body {
     list-style-type: none;
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-flow: column nowrap;
-    text-align: center;
+    padding-top: 40px;
   }
   .subname-items__list.award-projects {
     background-color: #caf4f2;
@@ -2102,7 +2110,7 @@ body {
   }
   .subname-item__link {
     width: 100%;
-    padding: 20px 16px 20px 24px;
+    padding: 20px 16px 20px 16px;
     color: #333;
     text-decoration: none;
     text-transform: uppercase;
@@ -2374,7 +2382,6 @@ body {
     padding-left: 0px;
   }
   .maecenas-button {
-    left: 0px;
     bottom: 8px;
   }
   .team-member {
@@ -2588,6 +2595,10 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
+  }
+
+  .gongadze-link {
+    height: 250px;
   }
 
   .founder-description {
@@ -3512,7 +3523,7 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  padding-top: 100px;
+  padding-top: 32px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -3530,8 +3541,8 @@ body {
 }
 
 .div-block {
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
 }
 
 .first-screen__text {
@@ -3626,6 +3637,7 @@ body {
 .content-item {
   color: #333;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .content-item:hover {
@@ -3637,11 +3649,31 @@ body {
   background-color: #e3e3e1;
   background-size: cover;
   background-position: top center;
+  position: relative;
 }
 
 .content-item__description {
   padding-top: 8px;
   padding-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.content-item__overlay {
+  background-color: rgba(84, 78, 217, .7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.content-item:hover .content-item__overlay {
+  opacity: 1;
 }
 
 .content-item__text-preview {
@@ -3664,16 +3696,19 @@ body {
 }
 
 .first-screen__link {
-  padding: 4px 28px 4px 16px;
+  padding: 8px 16px 8px 16px;
   color: #7d7ad9;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-decoration: none;
+  border: 1px solid #7d7ad9;
+  text-align: center;
+  transition: all 200ms ease-in;
 }
 
 .first-screen__link:hover {
-  color: #544ed9;
-  text-decoration: underline;
+  color: #fff;
+  background: #7d7ad9;
 }
 
 .separator-container {
@@ -3696,6 +3731,11 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+}
+
+.content-grid__gongadze {
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .project-link {
@@ -3724,12 +3764,38 @@ body {
   text-decoration: none;
 }
 
-.project-link.project-link--journalism {
-  background-image: url('../assets/images/project-journalism.jpg');
+.gongadze-link {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 350px;
+  padding-right: 16px;
+  padding-left: 16px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url('../assets/images/gongadze-young.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fcfcfa;
+  text-align: center;
+  text-decoration: none;
 }
 
-.project-link.project-link__profession {
-  background-image: url('../assets/images/project-profession.jpg');
+.gongadze-link__memories {
+  background-image: url('../assets/images/gongadze-w-wife.png');
+}
+
+.gongadze-link:hover .project-link__overlay {
+  background-color: rgba(84, 78, 217, 1);
 }
 
 .project-link__overlay {
@@ -3752,6 +3818,12 @@ body {
 .title-text__16 {
   font-family: DRUK, sans-serif;
   font-size: 1em;
+  letter-spacing: 0.06em;
+}
+
+.title-text__20 {
+  font-family: DRUK, sans-serif;
+  font-size: 1.3em;
   letter-spacing: 0.06em;
 }
 
@@ -4025,6 +4097,11 @@ body {
 }
 
 @media screen and (max-width: 479px) {
+  .div-block {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 32px;
+  }
   .headline-h1 {
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -4032,6 +4109,7 @@ body {
   .first-screen {
     padding-right: 24px;
     padding-left: 24px;
+    padding-top: 80px;
   }
   .content-items__grid {
     margin-top: 32px;

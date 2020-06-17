@@ -69,7 +69,7 @@
               :class="{'menu-item--current': $route.path === '/' }"
               @click.native="hideMenu"
             >
-              <div class="text-bold-28">Головна</div>
+              <div class="text-bold-24">Головна</div>
             </nuxt-link>
           </div>
           <div class="menu-item" @mouseenter="hideExtendedMenu">
@@ -79,7 +79,7 @@
               @click.native="hideMenu"
               :class="{'menu-item--current': $route.path.includes('/news-feed') }"
             >
-              <div class="text-bold-28">Новини</div>
+              <div class="text-bold-24">Новини</div>
             </nuxt-link>
           </div>
           <div class="menu-item" @mouseenter="hideExtendedMenu">
@@ -89,7 +89,7 @@
               @click.native="hideMenu"
               :class="{'menu-item--current': $route.path.includes('/publications') }"
             >
-              <div class="text-bold-28">Публікації</div>
+              <div class="text-bold-24">Публікації</div>
             </nuxt-link>
           </div>
           <div
@@ -101,7 +101,7 @@
               @click.native="hideMenu"
               :class="{'menu-item--current': $route.path.includes('/projects') }"
             >
-              <div class="text-bold-28">Проєкти Премії</div>
+              <div class="text-bold-24">Проєкти Премії</div>
             </div>
           </div>
           <div
@@ -114,7 +114,7 @@
               @click.native="hideMenu"
               :class="{'menu-item--current': $route.path.includes('/about') }"
             >
-              <div class="text-bold-28">Про Премію</div>
+              <div class="text-bold-24">Про Премію</div>
             </nuxt-link>
           </div>
           <div
@@ -127,7 +127,7 @@
               @click.native="hideMenu"
               :class="{'menu-item--current': $route.path.includes('/georgiy-gongadze') }"
             >
-              <div class="text-bold-28">Георгій Ґонґадзе</div>
+              <div class="text-bold-24">Георгій Ґонґадзе</div>
             </nuxt-link>
           </div>
         </div>
@@ -140,7 +140,7 @@
                 @click.native="hideMenu"
                 :class="{'menu-item--current': $route.path === '/' }"
               >
-                <div class="text-bold-28">Головна</div>
+                <div class="text-bold-24">Головна</div>
               </nuxt-link>
             </div>
             <div class="menu-item">
@@ -151,7 +151,7 @@
                 @click.native="hideMenu"
                 :class="{'menu-item--current': $route.path === '/news-feed' }"
               >
-                <div class="text-bold-28">Новини</div>
+                <div class="text-bold-24">Новини</div>
               </nuxt-link>
             </div>
             <div class="menu-item">
@@ -161,7 +161,7 @@
                 @click.native="hideMenu"
                 :class="{'menu-item--current': $route.path === '/publications' }"
               >
-                <div class="text-bold-28">Публікації</div>
+                <div class="text-bold-24">Публікації</div>
               </nuxt-link>
             </div>
             <div class="menu-item">
@@ -170,7 +170,7 @@
                 @click="showSubMenu('award-projects--mobile')"
                 :class="{'menu-item--current': $route.path === '/projects' }"
               >
-                <div class="text-bold-28">Проєкти Премії</div>
+                <div class="text-bold-24">Проєкти Премії</div>
               </div>
             </div>
             <div class="menu-item">
@@ -179,7 +179,7 @@
                 @click="showSubMenu('about-award--mobile')"
                 :class="{'menu-item--current': $route.path === '/about' }"
               >
-                <div class="text-bold-28">Про Премію</div>
+                <div class="text-bold-24">Про Премію</div>
               </div>
             </div>
             <div class="menu-item">
@@ -188,7 +188,7 @@
                 @click="showSubMenu('georgiy-gongadze--mobile')"
                 :class="{'menu-item--current': $route.path === '/georgiy-gondadze' }"
               >
-                <div class="text-bold-28">Георгій Ґонґадзе</div>
+                <div class="text-bold-24">Георгій Ґонґадзе</div>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@
                   <div class="back-icon" @click="backMobileMenu"></div>
                 </div>
                 <div class="control-name">
-                  <div class="text-bold-28">Георгій Ґонґадзе</div>
+                  <div class="text-bold-24">Георгій Ґонґадзе</div>
                 </div>
               </div>
               <div class="subname-items">
@@ -222,7 +222,7 @@
                   <div class="back-icon" @click="backMobileMenu"></div>
                 </div>
                 <div class="control-name">
-                  <div class="text-bold-28">Проєкти Премії</div>
+                  <div class="text-bold-24">Проєкти Премії</div>
                 </div>
               </div>
               <div class="subname-items">
@@ -241,7 +241,7 @@
                   <div class="back-icon" @click="backMobileMenu"></div>
                 </div>
                 <div class="control-name">
-                  <div class="text-bold-28">Про Премію</div>
+                  <div class="text-bold-24">Про Премію</div>
                 </div>
               </div>
               <div class="subname-items">

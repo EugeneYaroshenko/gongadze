@@ -3,7 +3,16 @@
     <div class="gongadze-content first-page">
       <div class="first-screen">
         <div class="div-block">
-          <div data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video-2 w-background-video w-background-video-atom"><video autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.mp4" data-wf-ignore="true"><source src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7db8a12fa324745ec0d98_Comp 1 (1)-transcode.webm" data-wf-ignore="true"></video></div>
+          <div data-poster-url="../assets/videos/clip-updated-poster-00001.jpg"
+               data-video-urls="../assets/videos/clip-updated-transcode.mp4,videos/clip-updated-transcode.webm"
+               data-autoplay="true" data-loop="true" data-wf-ignore="true"
+               class="background-video-2 w-background-video w-background-video-atom">
+            <video autoplay="" loop="" style="background-image:url('../assets/videos/clip-updated-poster-00001.jpg')"
+                   muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="../assets/videos/clip-updated-transcode.mp4" data-wf-ignore="true">
+              <source src="../assets/videos/clip-updated-transcode.webm" data-wf-ignore="true">
+            </video>
+          </div>
         </div>
         <div class="first-screen__text">
           <div class="text-regular-16">Премія покликана формувати моральні орієнтири в журналістиці та сприяти пошуку
@@ -106,33 +115,49 @@
         <div>
           <h2 class="content-heading">георгій ґонґадзе</h2>
         </div>
-      </div>
-      <div class="gongadze-block">
-        <div class="gongadze-navigation">
-          <nuxt-link to="/georgiy-gongadze" class="gongadze-navigation__link w-inline-block">
-            <h3 class="gongadze-heading">Біографія</h3>
+        <div class="w-layout-grid content-grid__projects content-grid__gongadze">
+          <nuxt-link to="/projects/social-enterprize" class="gongadze-link w-inline-block">
+            <div class="project-link__overlay"></div>
+            <div class="project-link__name">
+              <div class="title-text__20">Біографія</div>
+            </div>
           </nuxt-link>
-          <nuxt-link to="/georgiy-gongadze/memories" class="gongadze-navigation__link right-link w-inline-block">
-            <h3 class="gongadze-heading">Спогади</h3>
+          <nuxt-link to="/projects/journalism-change" class="gongadze-link gongadze-link__memories w-inline-block">
+            <div class="project-link__overlay"></div>
+            <div class="project-link__name">
+              <div class="title-text__20">Спогади</div>
+            </div>
           </nuxt-link>
         </div>
-        <div
-          data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg"
-          data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"
-          data-autoplay="true" data-loop="true" data-wf-ignore="true"
-          class="background-video w-background-video w-background-video-atom">
-          <video autoplay="" loop=""
-                 style="background-image:url(&quot;https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg&quot;)"
-                 muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-            <source
-              src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4"
-              data-wf-ignore="true">
-            <source
-              src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"
-              data-wf-ignore="true">
-          </video>
-        </div>
+
       </div>
+
+      <!--<div class="gongadze-block">-->
+        <!--<div class="gongadze-navigation">-->
+          <!--<nuxt-link to="/georgiy-gongadze" class="gongadze-navigation__link w-inline-block">-->
+            <!--<h3 class="gongadze-heading">Біографія</h3>-->
+          <!--</nuxt-link>-->
+          <!--<nuxt-link to="/georgiy-gongadze/memories" class="gongadze-navigation__link right-link w-inline-block">-->
+            <!--<h3 class="gongadze-heading">Спогади</h3>-->
+          <!--</nuxt-link>-->
+        <!--</div>-->
+        <!--<div-->
+          <!--data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg"-->
+          <!--data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"-->
+          <!--data-autoplay="true" data-loop="true" data-wf-ignore="true"-->
+          <!--class="background-video w-background-video w-background-video-atom">-->
+          <!--<video autoplay="" loop=""-->
+                 <!--style="background-image:url(&quot;https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg&quot;)"-->
+                 <!--muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">-->
+            <!--<source-->
+              <!--src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4"-->
+              <!--data-wf-ignore="true">-->
+            <!--<source-->
+              <!--src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"-->
+              <!--data-wf-ignore="true">-->
+          <!--</video>-->
+        <!--</div>-->
+      <!--</div>-->
       <!--<div class="title-screen__materials" id="other-materials" v-if="otherMaterials">-->
       <!--<div class="w-layout-grid grid__articles">-->
       <!--<material-->

@@ -1,19 +1,28 @@
 <template>
   <div>
-    <div class="gongadze-content project-container">
-      <h4 class="headline-h4 headline-with-subtext">Меценати</h4>
-      <div class="gongadze-content--condensed">
-        <div class="projects-decription">
-          <div class="text-regular-20">Меценатами Премії можуть стати виключно випускники Києво-Могилянської
-            Бізнес-Школи, представники powered KMBS alumni platform. Їх об’єднує спільний досвід навчання і прагнення
-            створювати системні зміни в Україні.
+    <div class="gongadze-content big-preview">
+      <div class="project-preview publications-preview">
+        <div class="project-preview__overlay"/>
+        <div class="project-preview__description">
+          <div class="description__name">
+            <h1 class="headline-h1">Меценати</h1>
           </div>
-          <br>
-          <div class="text-regular-20">Меценати своїми внесками забезпечують незалежність та незаангажованість
-            Премії від впливів, а також, як досвідченні управлінці, долучасються до вирішення стратегічних питань
-            розвитку Премії
+          <div class="description__about">
+            <div class="text-regular-20">Меценатами Премії можуть стати виключно випускники Києво-Могилянської
+              Бізнес-Школи, представники powered KMBS alumni platform. Їх об’єднує спільний досвід навчання і прагнення
+              створювати системні зміни в Україні.</div>
+            <br/>
+            <div class="text-regular-20">Меценати своїми внесками забезпечують незалежність та незаангажованість
+              Премії від впливів, а також, як досвідченні управлінці, долучасються до вирішення стратегічних питань
+              розвитку Премії</div>
           </div>
         </div>
+        <div class="navdown-container" v-scroll-to="'#materials'">
+          <div class="arrow-down arrow-down__first"></div>
+          <div class="arrow-down arrow-down__second"></div>
+        </div>
+      </div>
+      <div class="gongadze-content--condensed project-container" id="materials">
         <div class="maecenas-grid">
           <div class="maecenas">
             <div class="maecenas-image artemenko"></div>
