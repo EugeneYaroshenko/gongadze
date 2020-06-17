@@ -122,7 +122,7 @@
               <div class="title-text__20">Біографія</div>
             </div>
           </nuxt-link>
-          <nuxt-link to="/georgiy-gondadze/memories" class="gongadze-link gongadze-link__memories w-inline-block">
+          <nuxt-link to="/georgiy-gongadze/memories" class="gongadze-link gongadze-link__memories w-inline-block">
             <div class="project-link__overlay"></div>
             <div class="project-link__name">
               <div class="title-text__20">Спогади</div>
