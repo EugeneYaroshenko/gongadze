@@ -68,7 +68,7 @@
           <h2 class="content-heading">проєкти премії</h2>
         </div>
         <div class="w-layout-grid content-grid__projects">
-          <nuxt-link to="/projects/social-enterprize" class="project-link w-inline-block">
+          <nuxt-link to="/projects/stories-social-entrepreneurship" class="project-link w-inline-block">
             <div class="project-link__overlay"></div>
             <div class="project-link__name">
               <div class="title-text__16">Історії соціального підприємництва</div>
@@ -116,13 +116,13 @@
           <h2 class="content-heading">георгій ґонґадзе</h2>
         </div>
         <div class="w-layout-grid content-grid__projects content-grid__gongadze">
-          <nuxt-link to="/projects/social-enterprize" class="gongadze-link w-inline-block">
+          <nuxt-link to="/georgiy-gongadze" class="gongadze-link w-inline-block">
             <div class="project-link__overlay"></div>
             <div class="project-link__name">
               <div class="title-text__20">Біографія</div>
             </div>
           </nuxt-link>
-          <nuxt-link to="/projects/journalism-change" class="gongadze-link gongadze-link__memories w-inline-block">
+          <nuxt-link to="/georgiy-gondadze/memories" class="gongadze-link gongadze-link__memories w-inline-block">
             <div class="project-link__overlay"></div>
             <div class="project-link__name">
               <div class="title-text__20">Спогади</div>
