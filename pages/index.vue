@@ -74,13 +74,13 @@
               <div class="title-text__16">Історії соціального підприємництва</div>
             </div>
           </nuxt-link>
-          <nuxt-link to="/projects/journalism-change" class="project-link project-link--journalism w-inline-block">
+          <nuxt-link to="/projects/journalism-change" class="project-link journalism-change w-inline-block">
             <div class="project-link__overlay"></div>
             <div class="project-link__name">
               <div class="title-text__16">Журналістика змін</div>
             </div>
           </nuxt-link>
-          <nuxt-link to="/projects/profession-stay" class="project-link project-link__profession w-inline-block">
+          <nuxt-link to="/projects/profession-stay" class="project-link profession-stay w-inline-block">
             <div class="project-link__overlay"></div>
             <div class="project-link__name">
               <div class="title-text__16">Лишаюсь у професії</div>

@@ -3541,8 +3541,8 @@ body {
 }
 
 .div-block {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .first-screen__text {
@@ -4098,9 +4098,10 @@ body {
 
 @media screen and (max-width: 479px) {
   .div-block {
-    width: 250px;
-    height: 250px;
-    margin-bottom: 32px;
+    width: 100%;
+    max-height: 40vh;
+    margin-bottom: 24px;
+    overflow: hidden;
   }
   .headline-h1 {
     font-size: 1.5em;
