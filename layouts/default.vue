@@ -12,7 +12,7 @@
     <div class="loading-container" v-else>
       <div class="loading-block">
         <div class="loading-container__icon">
-          <img src="../assets/images/loader.gif" alt="">
+          <img src="../assets/images/white-icon.svg" alt="">
         </div>
       </div>
     </div>

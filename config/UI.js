@@ -22,7 +22,7 @@ export const menuStructure = {
       { name: 'Капітула премії', slug: '/about/kapitula' },
       { name: 'Лауреати Премії', slug: '/about/laureates' },
       { name: 'Меценати Премії', slug: '/about/maecenas' },
-      { name: 'Команда Премії', slug: '/about/team' },
+      { name: 'Контакти', slug: '/about/team' },
     ]
   },
   gongadze: {

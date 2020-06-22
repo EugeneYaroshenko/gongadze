@@ -273,7 +273,7 @@
                   </li>
                   <li class="subname-item" @click="hideMenu">
                     <nuxt-link to="/about/team" class="subname-item__link w-inline-block">
-                      <div class="text-regular-20">Команда Премії</div>
+                      <div class="text-regular-20">Контакти</div>
                     </nuxt-link>
                   </li>
                 </ul>

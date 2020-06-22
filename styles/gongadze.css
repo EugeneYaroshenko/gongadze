@@ -154,8 +154,7 @@ body {
 }
 
 .maecenas-grid {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   width: 100%;
   max-width: 1200px;
   margin-right: auto;
@@ -173,6 +172,10 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
+}
+
+.maecenas-grid--shown {
+  display: grid;
 }
 
 .maecenas-image {
@@ -357,8 +360,8 @@ body {
 }
 
 .member-about {
-  padding-bottom: 15px;
-  padding-left: 20px;
+  padding-top: 12px;
+  width: 100%;
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -366,6 +369,7 @@ body {
   -webkit-flex: 0 auto;
   -ms-flex: 0 auto;
   flex: 0 auto;
+  text-align: center;
 }
 
 .member-about.right-orientation {
@@ -562,6 +566,7 @@ body {
   max-width: 200px;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 24px;
 }
 
 .kapitula-years-container {
@@ -1212,7 +1217,7 @@ body {
 .menu-items__extended {
   opacity: 0;
   height: 100%;
-  background-color: #b0eae7;
+  background-color: #bebcef;
   visibility: hidden;
   position: absolute;
   top: 0;
@@ -1223,17 +1228,6 @@ body {
 .menu-items__extended.menu-items__extended--hidden {
   display: none;
   overflow: hidden;
-}
-
-.menu-items__extended.about-award {
-  background-color: #bebcef;
-}
-
-.menu-items__extended.award-projects {
-}
-
-.menu-items__extended.georgiy-gongadze {
-  background-color: #b0eab6;
 }
 
 .menu-subitems {
@@ -1849,10 +1843,6 @@ body {
   text-align: center;
 }
 
-.email-link {
-  color: #4acdc8;
-  letter-spacing: 0.03em;
-}
 
 .article-container {
   max-width: 800px;
@@ -2101,12 +2091,6 @@ body {
     display: flex;
     flex-flow: column nowrap;
     padding-top: 40px;
-  }
-  .subname-items__list.award-projects {
-    background-color: #caf4f2;
-  }
-  .subname-items__list.georgiy-gongadze {
-    background-color: #b0eab6;
   }
   .subname-item__link {
     width: 100%;
