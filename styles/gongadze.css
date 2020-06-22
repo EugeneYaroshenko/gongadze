@@ -265,6 +265,10 @@ body {
   background-image: url('../assets/images/ткаченко.jpg');
 }
 
+.maecenas-image.perebiy {
+  background-image: url('../assets/images/perebiy.jpg');
+}
+
 .maecenas-content {
   position: relative;
   height: 120px;

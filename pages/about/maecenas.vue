@@ -126,6 +126,12 @@
             </div>
           </div>
           <div class="maecenas">
+            <div class="maecenas-image perebiy"></div>
+            <div class="maecenas-content">
+              <div class="text-bold-18">Людмила Перебийнос</div>
+            </div>
+          </div>
+          <div class="maecenas">
             <div class="maecenas-image prosolenko"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">Оксана Просоленко</div>
@@ -231,6 +237,12 @@
             <div class="maecenas-image mishchenki"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">родина міщенків</div>
+            </div>
+          </div>
+          <div class="maecenas">
+            <div class="maecenas-image perebiy"></div>
+            <div class="maecenas-content">
+              <div class="text-bold-18">Людмила Перебийнос</div>
             </div>
           </div>
           <div class="maecenas">

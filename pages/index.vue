@@ -108,7 +108,7 @@
             <div>Меценати Премії</div>
           </nuxt-link>
           <nuxt-link to="/about/team" class="about-link w-inline-block">
-            <div>Команда Премії</div>
+            <div>Контакти</div>
           </nuxt-link>
         </div>
         <div class="separator-container"></div>
