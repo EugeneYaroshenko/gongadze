@@ -72,6 +72,19 @@
               <div class="text-bold-24">Головна</div>
             </nuxt-link>
           </div>
+          <div
+            class="menu-item"
+            @mouseenter="showExtendedMenu('about-award')"
+          >
+            <nuxt-link
+              to="/about"
+              class="menu-item__text w-inline-block"
+              @click.native="hideMenu"
+              :class="{'menu-item--current': $route.path.includes('/about') }"
+            >
+              <div class="text-bold-24">Про Премію</div>
+            </nuxt-link>
+          </div>
           <div class="menu-item" @mouseenter="hideExtendedMenu">
             <nuxt-link
               to="/news-feed"
@@ -106,19 +119,6 @@
           </div>
           <div
             class="menu-item"
-            @mouseenter="showExtendedMenu('about-award')"
-          >
-            <nuxt-link
-              to="/about"
-              class="menu-item__text w-inline-block"
-              @click.native="hideMenu"
-              :class="{'menu-item--current': $route.path.includes('/about') }"
-            >
-              <div class="text-bold-24">Про Премію</div>
-            </nuxt-link>
-          </div>
-          <div
-            class="menu-item"
             @mouseenter="showExtendedMenu('georgiy-gongadze')"
           >
             <nuxt-link
@@ -142,6 +142,15 @@
               >
                 <div class="text-bold-24">Головна</div>
               </nuxt-link>
+            </div>
+            <div class="menu-item">
+              <div
+                class="menu-item__text"
+                @click="showSubMenu('about-award--mobile')"
+                :class="{'menu-item--current': $route.path === '/about' }"
+              >
+                <div class="text-bold-24">Про Премію</div>
+              </div>
             </div>
             <div class="menu-item">
               <nuxt-link
@@ -171,15 +180,6 @@
                 :class="{'menu-item--current': $route.path === '/projects' }"
               >
                 <div class="text-bold-24">Проєкти Премії</div>
-              </div>
-            </div>
-            <div class="menu-item">
-              <div
-                class="menu-item__text"
-                @click="showSubMenu('about-award--mobile')"
-                :class="{'menu-item--current': $route.path === '/about' }"
-              >
-                <div class="text-bold-24">Про Премію</div>
               </div>
             </div>
             <div class="menu-item">

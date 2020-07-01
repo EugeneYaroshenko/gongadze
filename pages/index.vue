@@ -131,44 +131,8 @@
         </div>
 
       </div>
-
-      <!--<div class="gongadze-block">-->
-        <!--<div class="gongadze-navigation">-->
-          <!--<nuxt-link to="/georgiy-gongadze" class="gongadze-navigation__link w-inline-block">-->
-            <!--<h3 class="gongadze-heading">Біографія</h3>-->
-          <!--</nuxt-link>-->
-          <!--<nuxt-link to="/georgiy-gongadze/memories" class="gongadze-navigation__link right-link w-inline-block">-->
-            <!--<h3 class="gongadze-heading">Спогади</h3>-->
-          <!--</nuxt-link>-->
-        <!--</div>-->
-        <!--<div-->
-          <!--data-poster-url="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg"-->
-          <!--data-video-urls="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4,https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"-->
-          <!--data-autoplay="true" data-loop="true" data-wf-ignore="true"-->
-          <!--class="background-video w-background-video w-background-video-atom">-->
-          <!--<video autoplay="" loop=""-->
-                 <!--style="background-image:url(&quot;https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-poster-00001.jpg&quot;)"-->
-                 <!--muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">-->
-            <!--<source-->
-              <!--src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.mp4"-->
-              <!--data-wf-ignore="true">-->
-            <!--<source-->
-              <!--src="https://uploads-ssl.webflow.com/5ebff748d6a8b31a18057139/5ee7a4a03ba5abeb674f7a12_composition (1)-transcode.webm"-->
-              <!--data-wf-ignore="true">-->
-          <!--</video>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="title-screen__materials" id="other-materials" v-if="otherMaterials">-->
-      <!--<div class="w-layout-grid grid__articles">-->
-      <!--<material-->
-      <!--v-for="(post, index) in otherMaterials"-->
-      <!--:redirect-to="redirectTo"-->
-      <!--:post="post"-->
-      <!--:key="index"-->
-      <!--/>-->
-      <!--</div>-->
-      <!--</div>-->
     </div>
+    <subscription-form />
     <partners/>
   </div>
 </template>
@@ -177,6 +141,7 @@
   import titleMaterial from '~/modules/titlePage/titleMaterial'
   import Material from '~/modules/titlePage/material'
   import Partners from '~/modules/titlePage/partners'
+  import SubscriptionForm from '~/modules/common/subscriptionForm'
   import TimelineMax from 'gsap/umd/TimelineMax'
   import TweenMax from 'gsap/umd/TweenMax'
   import EasePack from 'gsap/umd/EasePack'
@@ -276,7 +241,8 @@
     components: {
       titleMaterial,
       Partners,
-      Material
+      Material,
+      SubscriptionForm
     }
   }
 </script>

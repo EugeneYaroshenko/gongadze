@@ -92,6 +92,10 @@
             <div class="maecenas-image isak"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">Андрій Ісак</div>
+              <nuxt-link
+                to="/article/?cat_id=10&title=andrii-sak-chim-lyudina-schaslivisha-tim-legshe-vona-dilitsya-z-inshimi"
+                class="maecenas-button">інтерв&#x27;ю
+              </nuxt-link>
             </div>
           </div>
           <div class="maecenas">
@@ -117,12 +121,18 @@
             <div class="maecenas-image mishchenki"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">родина міщенків</div>
+              <nuxt-link to="/article/?cat_id=10&title=roman-mischenko-mistetstvo-rozshiryu-gorizonti-tomu-scho-vono--pro-maibutn"
+                         class="maecenas-button">інтерв&#x27;ю
+              </nuxt-link>
             </div>
           </div>
           <div class="maecenas">
             <div class="maecenas-image novitskiy"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">Дмитро Новицький</div>
+              <nuxt-link to="/article/?cat_id=10&title=dmitro-novitskii-metsenatstvo--tse-istoriya-pro-maibutn"
+                         class="maecenas-button">інтерв&#x27;ю
+              </nuxt-link>
             </div>
           </div>
           <div class="maecenas">
@@ -237,6 +247,9 @@
             <div class="maecenas-image mishchenki"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">родина міщенків</div>
+              <nuxt-link to="/article/?cat_id=10&title=roman-mischenko-mistetstvo-rozshiryu-gorizonti-tomu-scho-vono--pro-maibutn"
+                         class="maecenas-button">інтерв&#x27;ю
+              </nuxt-link>
             </div>
           </div>
           <div class="maecenas">
