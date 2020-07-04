@@ -1942,7 +1942,7 @@ body {
   }
   .menu-items {
     padding-right: 0px;
-    padding-bottom: 0;
+    padding-bottom: 40px;
   }
   .menu-item {
     margin-top: 0px;
@@ -1954,7 +1954,6 @@ body {
     padding-left: 12px;
     margin-top: 32px;
     padding-bottom: 0;
-    order: 1;
   }
   .menu-icon.facebook {
     margin-left: 0px;
@@ -1979,11 +1978,10 @@ body {
   }
   .menu-items__container.menu-items--mobile {
     display: flex;
-    order: 2;
   }
   .menu-items__names {
     display: block;
-    padding-top: 32px;
+    padding-top: 0px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;

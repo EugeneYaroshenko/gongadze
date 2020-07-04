@@ -69,7 +69,7 @@
               :class="{'menu-item--current': $route.path === '/' }"
               @click.native="hideMenu"
             >
-              <div class="text-bold-24">Головна</div>
+             <div class="gongadze-icon" :class="{'gongadze-icon--current': $route.path === '/' }"/>
             </nuxt-link>
           </div>
           <div
@@ -140,7 +140,7 @@
                 @click.native="hideMenu"
                 :class="{'menu-item--current': $route.path === '/' }"
               >
-                <div class="text-bold-24">Головна</div>
+                <div class="gongadze-icon" :class="{'gongadze-icon--current': $route.path === '/' }"/>
               </nuxt-link>
             </div>
             <div class="menu-item">
@@ -415,6 +415,24 @@
     }
   }
 
+  .gongadze-icon {
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 70px;
+    background-image: url('../../assets/images/gong-icon.svg');
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--current {
+      opacity: 1;
+    }
+  }
+
   .subname {
     transform: translate3d(40%, 0, 0);
     transition: all 350ms ease-in;
@@ -427,6 +445,11 @@
   @media screen and (max-width: 479px) {
     .menu-toggle {
       top: 20px;
+    }
+
+    .gongadze-icon {
+      height: 50px;
+      width: 50px;
     }
   }
 </style>

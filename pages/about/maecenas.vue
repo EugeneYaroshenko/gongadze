@@ -160,6 +160,9 @@
             <div class="maecenas-image tkachuk"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">Олександр ткачук</div>
+              <nuxt-link to="/article/?cat_id=10&title=oleksandr-tkachuk-metsenatstvo--tse-pro-rozvitok-i-stvorennya-novogo"
+                         class="maecenas-button">інтерв&#x27;ю
+              </nuxt-link>
             </div>
           </div>
 
@@ -271,6 +274,9 @@
             <div class="maecenas-image tkachuk"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">Олександр ткачук</div>
+              <nuxt-link to="/article/?cat_id=10&title=oleksandr-tkachuk-metsenatstvo--tse-pro-rozvitok-i-stvorennya-novogo"
+                         class="maecenas-button">інтерв&#x27;ю
+              </nuxt-link>
             </div>
           </div>
           <div class="maecenas">
