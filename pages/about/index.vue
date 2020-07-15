@@ -7,7 +7,7 @@
         <div>
           <div class="founders">
             <div class="another-founder">
-              <a href="https://pen.org.ua/" class="link-block__founder w-inline-block">
+              <a href="https://pen.org.ua/" target="_blank" class="link-block__founder w-inline-block">
                 <div class="founder-about">
                   <div class="founder-title">
                     <div class="founder-icon main"><img src="../../assets/images/pen-icon.svg" alt=""></div>
@@ -27,7 +27,7 @@
                   </div>
                   <div class="founder-block">
                     <div class="text-bold-24 centered-block">powered KMBS alumni platform</div>
-                    <div class="founder-description">це спільнота випускників Києво-Могилянської Бізнес-Школи. На базі платформи випускники об’єднуються, ініціюють та втілюють проєкти, одним із яких стала Премія імені Георгія Ґонґадзе.<br></div>
+                    <div class="founder-description">Спільнота випускників Києво-Могилянської Бізнес-Школи. На базі платформи випускники об’єднуються, ініціюють та втілюють проєкти, одним із яких стала Премія імені Георгія Ґонґадзе.<br></div>
                   </div>
                 </div>
               </a>
@@ -40,7 +40,7 @@
                   </div>
                   <div class="founder-block">
                     <div class="text-bold-24 centered-block">Українська Правда</div>
-                    <div class="founder-description">онлайн-видання, засноване 2000-го року Георгієм Ґонґадзе та Оленою Притулою. Є одним із найвідвідуваніших медіа в Україні та об’єднує кілька проєктів, серед яких “Економічна правда”, “Українська правда. Життя”, “Європейська правда” та інші.<br></div>
+                    <div class="founder-description">Онлайн-видання, засноване 2000-го року Георгієм Ґонґадзе та Оленою Притулою. Є одним із найвідвідуваніших медіа в Україні та об’єднує кілька проєктів, серед яких “Економічна правда”, “Українська правда. Життя”, “Європейська правда” та інші.<br></div>
                   </div>
                 </div>
               </a>

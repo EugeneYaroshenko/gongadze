@@ -47,13 +47,13 @@
             <a href="https://mind.ua" target="_blank" class="partner-icon__container w-inline-block">
               <div class="partner-icon mind-logo"></div>
             </a>
-            <a href="https://hromadske.ua" class="partner-icon__container w-inline-block">
+            <a href="https://hromadske.ua" target="_blank" class="partner-icon__container w-inline-block">
               <div class="partner-icon hromadske-logo"></div>
             </a>
-            <a href="https://espreso.tv/" class="partner-icon__container w-inline-block">
+            <a href="https://espreso.tv/" target="_blank" class="partner-icon__container w-inline-block">
               <div class="partner-icon espreso-logo"></div>
             </a>
-            <a href="http://www.reporters.media/" class="partner-icon__container w-inline-block">
+            <a href="http://www.reporters.media/" target="_blank" class="partner-icon__container w-inline-block">
               <div class="partner-icon reporters-logo"></div>
             </a>
           </div>

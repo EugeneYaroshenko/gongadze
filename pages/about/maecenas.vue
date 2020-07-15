@@ -47,7 +47,7 @@
           <div class="maecenas">
             <div class="maecenas-image brusilovskiy"></div>
             <div class="maecenas-content">
-              <div class="text-bold-18">Олег Брусиловський</div>
+              <div class="text-bold-18">Олег Брусіловський</div>
               <nuxt-link to="/article/?cat_id=10&title=oleg-brusilovskii-pro-dopomogu-za-vnutrishnim-poklikom"
                          class="maecenas-button">інтерв&#x27;ю
               </nuxt-link>
@@ -72,7 +72,7 @@
           <div class="maecenas">
             <div class="maecenas-image dulepov"></div>
             <div class="maecenas-content">
-              <div class="text-bold-18">Сергій Дулепов</div>
+              <div class="text-bold-18">Сергій Дулєпов</div>
               <nuxt-link to="/article/?cat_id=10&title=sergii-dulpov-metsenat--tse-toi-hto-pidtrimu-abo-initsiyu-zmini"
                          class="maecenas-button">інтерв&#x27;ю
               </nuxt-link>
@@ -112,7 +112,7 @@
             <div class="maecenas-image maslova"></div>
             <div class="maecenas-content">
               <div class="text-bold-18">Марина Маслова</div>
-              <nuxt-link to="/article/?cat_id=10&title=marina-masalova-pro-metsenatstvo-i-stalii-rozvitok"
+              <nuxt-link to="/article/?cat_id=10&title=marina-maslova-pro-metsenatstvo-i-stalii-rozvitok"
                          class="maecenas-button">інтерв&#x27;ю
               </nuxt-link>
             </div>
@@ -186,7 +186,7 @@
           <div class="maecenas">
             <div class="maecenas-image brusilovskiy"></div>
             <div class="maecenas-content">
-              <div class="text-bold-18">Олег Брусиловський</div>
+              <div class="text-bold-18">Олег Брусіловський</div>
               <nuxt-link to="/article/?cat_id=10&title=oleg-brusilovskii-pro-dopomogu-za-vnutrishnim-poklikom"
                          class="maecenas-button">інтерв&#x27;ю
               </nuxt-link>
@@ -220,7 +220,7 @@
           <div class="maecenas">
             <div class="maecenas-image dulepov"></div>
             <div class="maecenas-content">
-              <div class="text-bold-18">Сергій Дулепов</div>
+              <div class="text-bold-18">Сергій Дулєпов</div>
               <nuxt-link to="/article/?cat_id=10&title=sergii-dulpov-metsenat--tse-toi-hto-pidtrimu-abo-initsiyu-zmini"
                          class="maecenas-button">інтерв&#x27;ю
               </nuxt-link>
