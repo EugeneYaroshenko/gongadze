@@ -2,26 +2,37 @@
   <div>
     <div class="gongadze-content first-page">
       <div class="first-screen">
-        <div class="div-block">
-          <div data-poster-url="../assets/videos/clip-updated-poster-00001.jpg"
-               data-video-urls="../assets/videos/clip-updated-transcode.mp4,videos/clip-updated-transcode.webm"
-               data-autoplay="true" data-loop="true" data-wf-ignore="true"
-               class="background-video-2 w-background-video w-background-video-atom">
-            <video autoplay="" loop="" style="background-image:url('../assets/videos/clip-updated-poster-00001.jpg')"
-                   muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-              <source src="../assets/videos/clip-updated-transcode.mp4" data-wf-ignore="true">
-              <source src="../assets/videos/clip-updated-transcode.webm" data-wf-ignore="true">
-            </video>
-          </div>
+        <div class="parent-element-to-video">
+          <video autoplay="" loop=""
+                 muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+            <source src="../assets/videos/background-water.mp4" data-wf-ignore="true">
+            >
+          </video>
         </div>
-        <div class="first-screen__text">
+        <div class="first-screen__information">
+          <div class="first-screen__logo">
+          </div>
+          <!--<div class="div-block">-->
+          <!--<div data-poster-url="../assets/videos/clip-updated-poster-00001.jpg"-->
+          <!--data-video-urls="../assets/videos/clip-updated-transcode.mp4,videos/clip-updated-transcode.webm"-->
+          <!--data-autoplay="true" data-loop="true" data-wf-ignore="true"-->
+          <!--class="background-video-2 w-background-video w-background-video-atom">-->
+          <!--<video autoplay="" loop="" style="background-image:url('../assets/videos/clip-updated-poster-00001.jpg')"-->
+          <!--muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">-->
+          <!--<source src="../assets/videos/clip-updated-transcode.mp4" data-wf-ignore="true">-->
+          <!--<source src="../assets/videos/clip-updated-transcode.webm" data-wf-ignore="true">-->
+          <!--</video>-->
+          <!--</div>-->
+          <!--</div>-->
+          <div class="first-screen__text">
           <div class="text-regular-16">Премія покликана формувати моральні орієнтири в журналістиці та сприяти пошуку
-            інноваційних рішень донесення правди
+          інноваційних рішень донесення правди
           </div>
-        </div>
-        <div class="navdown-container" v-scroll-to="'#materials'">
+          </div>
+          <div class="navdown-container" v-scroll-to="'#materials'">
           <div class="arrow-down arrow-down__first"></div>
           <div class="arrow-down arrow-down__second"></div>
+          </div>
         </div>
       </div>
       <div id="materials" class="content-screen">
@@ -294,7 +305,44 @@
     background-color: rgba(84, 78, 217, 1);
   }
 
+  .parent-element-to-video {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+  video {
+    height: 100%;
+    width: 177.77777778vh;
+    min-width: 100%;
+    min-height: 56.25vw;
+  }
+
+  .first-screen__information {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 64px;
+    background: rgba(#010002, 0.2);
+  }
+
+  .first-screen__logo {
+    width: 200px;
+    height: 200px;
+    background-image: url('../assets/images/gongadze-full.svg');
+    background-size: contain;
+    background-position: center center;
+  }
+
   @media screen and (max-width: 991px) {
+    .parent-element-to-video {
+      display: none;
+    }
+
     .column-art {
       position: absolute;
       right: 0;
