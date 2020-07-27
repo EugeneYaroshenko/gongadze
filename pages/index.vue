@@ -2,37 +2,26 @@
   <div>
     <div class="gongadze-content first-page">
       <div class="first-screen">
-        <div class="parent-element-to-video">
-          <video autoplay="" loop=""
-                 muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-            <source src="../assets/videos/background-water.mp4" data-wf-ignore="true">
-            >
-          </video>
+        <div class="div-block">
+          <div data-poster-url="../assets/videos/clip-updated-poster-00001.jpg"
+               data-video-urls="../assets/videos/clip-updated-transcode.mp4,videos/clip-updated-transcode.webm"
+               data-autoplay="true" data-loop="true" data-wf-ignore="true"
+               class="background-video-2 w-background-video w-background-video-atom">
+            <video autoplay="" loop="" style="background-image:url('../assets/videos/clip-updated-poster-00001.jpg')"
+                   muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="../assets/videos/clip-updated-transcode.mp4" data-wf-ignore="true">
+              <source src="../assets/videos/clip-updated-transcode.webm" data-wf-ignore="true">
+            </video>
+          </div>
         </div>
-        <div class="first-screen__information">
-          <div class="first-screen__logo">
-          </div>
-          <!--<div class="div-block">-->
-          <!--<div data-poster-url="../assets/videos/clip-updated-poster-00001.jpg"-->
-          <!--data-video-urls="../assets/videos/clip-updated-transcode.mp4,videos/clip-updated-transcode.webm"-->
-          <!--data-autoplay="true" data-loop="true" data-wf-ignore="true"-->
-          <!--class="background-video-2 w-background-video w-background-video-atom">-->
-          <!--<video autoplay="" loop="" style="background-image:url('../assets/videos/clip-updated-poster-00001.jpg')"-->
-          <!--muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">-->
-          <!--<source src="../assets/videos/clip-updated-transcode.mp4" data-wf-ignore="true">-->
-          <!--<source src="../assets/videos/clip-updated-transcode.webm" data-wf-ignore="true">-->
-          <!--</video>-->
-          <!--</div>-->
-          <!--</div>-->
-          <div class="first-screen__text">
+        <div class="first-screen__text">
           <div class="text-regular-16">Премія покликана формувати моральні орієнтири в журналістиці та сприяти пошуку
-          інноваційних рішень донесення правди
+            інноваційних рішень донесення правди
           </div>
-          </div>
-          <div class="navdown-container" v-scroll-to="'#materials'">
+        </div>
+        <div class="navdown-container" v-scroll-to="'#materials'">
           <div class="arrow-down arrow-down__first"></div>
           <div class="arrow-down arrow-down__second"></div>
-          </div>
         </div>
       </div>
       <div id="materials" class="content-screen">
@@ -153,59 +142,10 @@
   import Material from '~/modules/titlePage/material'
   import Partners from '~/modules/titlePage/partners'
   import SubscriptionForm from '~/modules/common/subscriptionForm'
-  import TimelineMax from 'gsap/umd/TimelineMax'
-  import TweenMax from 'gsap/umd/TweenMax'
-  import EasePack from 'gsap/umd/EasePack'
   import {mapState} from 'vuex'
 
   export default {
     layout: 'titleLayout',
-    // mounted () {
-    //   const t = new TimelineMax()
-    //
-    //   t.add(TweenMax.to(
-    //     this.$refs.websiteHeading,
-    //     1,
-    //     {
-    //       transform: 'translate3d(0, 0, 0)',
-    //       opacity: 1,
-    //       ease: EasePack.Sine.easeOut,
-    //       delay: .2,
-    //     }
-    //   ), "first")
-    //
-    //   t.add(TweenMax.to(
-    //     this.$refs.columnArt,
-    //     1,
-    //     {
-    //       transform: 'translate3d(0, 0, 0)',
-    //       opacity: 1,
-    //       ease: EasePack.Sine.easeOut,
-    //     }
-    //   ), "first")
-    //
-    //   t.add(TweenMax.to(
-    //     this.$refs.scrollMain,
-    //     .3,
-    //     {
-    //       transform: 'translate3d(0, 0, 0)',
-    //       opacity: 1,
-    //       ease: EasePack.Sine.easeOut,
-    //     }
-    //   ), "second")
-    //
-    //   t.add(TweenMax.to(
-    //     this.$refs.scrollAdditional,
-    //     .45,
-    //     {
-    //       transform: 'translate3d(0, 0, 0)',
-    //       opacity: 1,
-    //       ease: EasePack.Back.easeOut.config(2.7),
-    //       delay: .2
-    //     }
-    //   ), "second")
-    //
-    // },
     computed: {
       ...mapState({
                     postsByCategory: state => state.data.postsByCategory,
@@ -309,12 +249,6 @@
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-  }
-  video {
-    height: 100%;
-    width: 177.77777778vh;
-    min-width: 100%;
-    min-height: 56.25vw;
   }
 
   .first-screen__information {

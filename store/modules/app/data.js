@@ -15,6 +15,7 @@ const simplifiedPost = function (post) {
     date_mls: moment(post.acf.date_published, 'YYYYMMDD').valueOf(),
     categories: post.category,
     post_image: post.featured_image,
+    youtube: post.acf.youtube_video,
     image_comment: post.acf.image_comment ? post.acf.image_comment : null,
     excerpt: post.excerpt,
     order: post.acf.order_position ? +post.acf.order_position : 0

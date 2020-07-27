@@ -66,6 +66,8 @@
         const category = this.categories.filter( category => slug.includes(category.slug))[0]
         const projectsParentCategory = this.categories.filter( category => category.slug === 'projects')[0]
 
+        console.log(this.categories, slug, category)
+
         if (category && category.parent === projectsParentCategory.id) {
           return category
         } else {
@@ -76,6 +78,7 @@
     computed: {
       projectCategory () {
         const category = this.routeSlugIsProjectCategory(this.$route.path.replace('/projects/', ''))
+
 
         if (category) {
           return category
@@ -88,6 +91,7 @@
       },
       categoryPosts () {
         if (this.projectCategory) {
+          console.log(this.projectCategory, this.posts)
           return [...this.posts[this.projectCategory.id]].sort((a, b) => a.date_mls < b.date_mls ? 1 : -1)
         } else {
           return []

@@ -56,7 +56,11 @@ module.exports = {
     {
       src: '~plugins/vueScrollmagic.js',
       ssr: false
-    }
+    },
+    {
+      src: '~/plugins/vue-youtube',
+      ssr: false
+    },
   ],
   devModules: [],
   /*

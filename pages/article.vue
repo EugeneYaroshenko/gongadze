@@ -21,8 +21,24 @@
             </div>
           </div>
           <div class="article__photo-container">
-            <div class="article__photo" :style="{ backgroundImage: `url('${post.post_image}')` }"/>
-            <div class="image-comment"><div class="text-bold-15">{{ post.image_comment }}</div></div>
+              <div v-if="post.youtube">
+                <no-ssr>
+                  <div
+                    class="video-block"
+                  >
+                    <youtube
+                      :video-id="videoID"
+                      ref="youtube"
+                      :fit-parent="true"
+                    />
+                  </div>
+                </no-ssr>
+              </div>
+              <div v-else>
+                <div class="article__photo" :style="{ backgroundImage: `url('${post.post_image}')` }"/>
+                <div class="image-comment"><div class="text-bold-15">{{ post.image_comment }}</div>
+              </div>
+            </div>
           </div>
           <div class="article__text">
             <div class="text-regular-20" v-html="post.content"/>
@@ -37,6 +53,7 @@
             <a :href="mailSharePath" class="menu-icon mail"></a>
           </div>
           <recommended-articles
+            v-if="recommendedPosts"
             :recommended-posts="recommendedPosts"
             :category-id="category.id"
             :update-post="updatePost"
@@ -49,9 +66,10 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex';
-  import RecommendedArticles from '~/modules/article/recommendedPosts';
-  import { colorsPalette } from '~/config/UI';
+  import { mapState } from 'vuex'
+  import RecommendedArticles from '~/modules/article/recommendedPosts'
+  import { colorsPalette } from '~/config/UI'
+  import { getIdFromUrl } from 'vue-youtube'
 
   export default {
     layout: 'articleLayout',
@@ -117,6 +135,9 @@
                     postsByCategory: state => state.data.postsByCategory,
                     allCategories: state => state.categories.categories,
                   }),
+      videoID () {
+        return getIdFromUrl(this.post.youtube)
+      },
       facebookSharePath() {
         return `https://www.facebook.com/sharer/sharer.php?u=#${encodeURIComponent(process.env.baseUrl + this.$route.fullPath)}`
       },
@@ -210,6 +231,22 @@
       &:hover {
         opacity: 1;
       }
+    }
+  }
+
+  .video-block {
+    width: 100%;
+    height: 500px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 700px) {
+    .video-block {
+      height: 300px;
     }
   }
 
