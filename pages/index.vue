@@ -86,6 +86,12 @@
               <div class="title-text__16">Лишаюсь у професії</div>
             </div>
           </nuxt-link>
+          <nuxt-link to="/projects/journalism-sovereign-ukraine" class="project-link profession-stay w-inline-block">
+            <div class="project-link__overlay"></div>
+            <div class="project-link__name">
+              <div class="title-text__16">Журналістика незалежної України: Історія від першої особи</div>
+            </div>
+          </nuxt-link>
         </div>
         <div class="separator-container"></div>
         <div>

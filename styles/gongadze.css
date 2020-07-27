@@ -3715,8 +3715,8 @@ body {
   margin-top: 54px;
   margin-bottom: 54px;
   grid-column-gap: 48px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
 }
