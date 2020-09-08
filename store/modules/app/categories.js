@@ -46,9 +46,11 @@ const actions = {
     commit(types.GET_CATEGORIES_REQUEST)
 
     try {
-      const response = await this.$axios.$get('/api/categories')
+      const data = await this.$axios.$get('/api/categories')
 
-      commit(types.GET_CATEGORIES_SUCCESS, response.data)
+      const dataParsed = JSON.parse(data.data.replace(`<p style="overflow: auto; position: fixed; height: 0pt; width: 0pt"> </p>`, ''))
+
+      commit(types.GET_CATEGORIES_SUCCESS, dataParsed)
     } catch (error) {
       commit(types.GET_CATEGORIES_ERROR, error)
     }

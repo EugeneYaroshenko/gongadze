@@ -45,7 +45,7 @@ const mutations = {
     let postsByCategory = {}
     let allPosts = []
 
-    response.data.forEach(postItem => {
+    response.forEach(postItem => {
       const post = simplifiedPost(postItem)
 
       post.categories.forEach(category => {
@@ -75,8 +75,9 @@ const actions = {
 
     try {
       const data = await this.$axios.$get('/api/posts')
+      const dataParsed = JSON.parse(data.data.replace(`<p style="overflow: auto; position: fixed; height: 0pt; width: 0pt"> </p>`, ''))
 
-      commit(types.GET_POSTS_SUCCESS, data)
+      commit(types.GET_POSTS_SUCCESS, dataParsed)
     } catch (error) {
       commit(types.GET_POSTS_ERROR, error)
     }
